@@ -70,7 +70,7 @@
     max-height: 80px;
     overflow-y: hidden;
     row-gap: 24px;
-    border-bottom: 1px solid rgba(36, 38, 38, 1);
+    border-bottom: 1px solid rgb(19, 19, 19);
     transition: max-height 2s ease, background-color 2s ease-in-out;
   }
 
