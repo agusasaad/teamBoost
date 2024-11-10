@@ -12,6 +12,7 @@ body {
 :root {
   --subtitle: rgb(187, 148, 229);
   --title: rgb(255, 255, 255);
+  --title-black: rgb(36, 36, 36);
   --text: #c7cbd4;
   --button: rgb(100, 48, 192);
   --white: #ffffff;
@@ -22,7 +23,7 @@ body {
 }
 
 body {
-  background: #000;
+  background: linear-gradient(180deg, #f0f4fa 0%, rgb(255, 255, 255) 100%);
 }
 
 * {
@@ -38,4 +39,8 @@ a {
 
 button {
   cursor: pointer;
+}
+
+ul {
+  list-style: none;
 }

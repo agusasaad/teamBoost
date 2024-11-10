@@ -1,0 +1,116 @@
+.containerNav {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  position: fixed;
+  top: 0;
+}
+
+.nav {
+  width: 100%;
+  max-width: 1200px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 24px 10px;
+}
+
+.menu {
+  width: 100%;
+  max-width: 550px;
+}
+
+.menu ul {
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.menu ul li {
+  cursor: pointer;
+  font-size: 15px;
+  font-weight: 500;
+}
+
+.menu ul li .button_contact {
+  background: transparent;
+  border: none;
+  border: 1px solid var(--white);
+  padding: 10px 25px;
+  border-radius: 15px;
+  color: white;
+  font-family: var(--inter);
+  font-size: 15px;
+  font-weight: 500;
+}
+
+.hamburguer {
+  display: none;
+}
+
+@media (max-width: 1024px) {
+  .hamburguer {
+    display: flex;
+    order: 2;
+  }
+
+  .hamburguer button {
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+  }
+
+  .nav {
+    flex-wrap: wrap;
+    max-height: 80px;
+    overflow-y: hidden;
+    row-gap: 24px;
+    border-bottom: 1px solid rgb(19, 19, 19);
+    transition: max-height 2s ease, background-color 2s ease-in-out;
+    background-color: #040309d8;
+    backdrop-filter: blur(5px);
+  }
+
+  .nav.show {
+    max-height: 800px;
+    transition: max-height 2s ease;
+    background-color: #040309d8;
+    backdrop-filter: blur(5px);
+  }
+
+  .menu {
+    order: 3;
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .menu ul {
+    flex-direction: column;
+    gap: 45px;
+  }
+
+  .menu ul li {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .menu ul li .button_contact {
+    width: 100%;
+    border: 0px;
+    background-color: var(--button);
+    font-family: var(--inter);
+    color: var(--white);
+    font-size: 15px;
+    font-weight: 600;
+    padding: 16px 20px;
+    border-radius: 15px;
+    letter-spacing: 0.2px;
+  }
+}

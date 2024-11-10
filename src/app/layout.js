@@ -1,5 +1,6 @@
-import NavBar from '@/components/NavBar/NavBar'
+import NavBar from '@/components/navBar/NavBar'
 import './globals.css'
+import Footer from '@/components/footer/Footer'
 
 export const metadata = {
   title: 'Team Boost',
@@ -13,6 +14,7 @@ export default function RootLayout({ children }) {
       <body>
         <NavBar />
         {children}
+        <Footer />
       </body>
     </html>
   )
