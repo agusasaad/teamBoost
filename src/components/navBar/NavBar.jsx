@@ -3,7 +3,7 @@ import { useEffect, useRef, useState } from 'react'
 import styles from './NavBar.module.css'
 import Hamburguer from '@/assets/icons/Hamburguer'
 import Image from 'next/image'
-import logo from '@/assets/images/hkNOUpX9NKkfNMGFjYql6SpzfQ.svg'
+import logo from '@/assets/images/logo_3.svg'
 import { AnimationNav } from './AnimationNav'
 
 const NavBar = () => {
@@ -37,9 +37,9 @@ const NavBar = () => {
           <Image
             src={logo}
             alt='Logo'
-            width={100}
-            height={100}
-            style={{ width: '100px', height: 'auto' }}
+            width={200}
+            height={200}
+            style={{ width: '200px', height: 'auto' }}
           />
         </div>
         <div className={styles.menu}>

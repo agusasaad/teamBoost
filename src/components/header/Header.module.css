@@ -1,5 +1,5 @@
 .container {
-  width: 100%;
+  width: 99%;
   height: auto;
   background-image: url('./../../assets/images/background.avif');
   background-attachment: fixed;
@@ -9,6 +9,8 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  border-bottom-left-radius: 40px;
+  border-bottom-right-radius: 40px;
 }
 
 .titles {
@@ -18,8 +20,8 @@
   justify-content: center;
   gap: 20px;
   height: auto;
-  min-height: 100vh;
   overflow: hidden;
+  padding: 220px 0px 200px 0px;
 }
 
 .titles .subtitle {
@@ -98,7 +100,6 @@
 @media (max-width: 1300px) {
   .titles {
     width: 90%;
-    min-height: 90vh;
   }
 
   .titles h1 {
@@ -113,11 +114,13 @@
   }
 
   .titles {
-    min-height: none;
-    padding: 100px 0px 50px 0px;
+    padding: 150px 0px 100px 0px;
   }
   .titles h1 {
     font-size: 50px;
+  }
+  .titles .ranking {
+    display: none;
   }
 }
 

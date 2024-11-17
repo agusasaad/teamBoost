@@ -41,11 +41,10 @@ export const AnimationNav = (
     containerRef,
     {
       backgroundColor: 'rgba(0, 0, 0, 0)',
-      backdropFilter: 'blur(0px)',
     },
     {
-      backgroundColor: '#040309d8',
-      backdropFilter: 'blur(5px)',
+      background:
+        'linear-gradient( 0deg,rgba(0, 0, 0, 0) 0%,rgba(0, 0, 0, 0.6895133053221288) 50%,rgba(0, 0, 0, 0.8995973389355743) 72%,rgba(0, 0, 0, 1) 95%)',
       duration: 2,
       ease: 'power3.out',
       scrollTrigger: {

@@ -10,9 +10,9 @@ export default function Home() {
     <div className={styles.page}>
       <Header />
       <main className={styles.main}>
-        {/* <AboutUs /> */}
+        <AboutUs />
         <TechStack />
-        <ContactUs />
+        {/* <ContactUs /> */}
       </main>
     </div>
   )

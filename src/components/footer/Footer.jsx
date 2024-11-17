@@ -1,7 +1,7 @@
 'use client'
 import Image from 'next/image'
 import styles from './Footer.module.css'
-import logo from '@/assets/images/hkNOUpX9NKkfNMGFjYql6SpzfQ.svg'
+import logo from '@/assets/images/logo_3.svg'
 import Link from 'next/link'
 import Facebook from '@/assets/icons/Facebook'
 import Linkedin from '@/assets/icons/Linkedin'
@@ -67,9 +67,9 @@ const Footer = () => {
               <Image
                 src={logo}
                 alt='Logo'
-                width={100}
+                width={160}
                 height={100}
-                style={{ width: '100px', height: 'auto' }}
+                style={{ width: '160px', height: 'auto' }}
               />
               <p>Transform your business with SymbioNet.</p>
             </div>
@@ -135,7 +135,7 @@ const Footer = () => {
           <div className={styles.copyright}>
             <p ref={textRef}>© 2023 SymbioNet. All rights reserved</p>
             <p ref={text_twoRef}>
-              Desing by <strong>SymbioNet</strong>
+              Desing by <strong>SymbioNet.</strong>
             </p>
           </div>
         </div>

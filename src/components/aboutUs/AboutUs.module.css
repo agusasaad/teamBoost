@@ -1,27 +1,23 @@
 .container {
   width: 100%;
-  max-width: 1350px;
   height: auto;
   display: flex;
-  flex-direction: row;
   justify-content: center;
   align-items: center;
-  column-gap: 60px;
-  padding: 100px 0px;
-}
-
-.container .image_about img {
+  flex-direction: column;
+  gap: 50px;
+  padding: 100px 0px 200px 0px;
 }
 
 .info_text {
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
+  align-items: center;
   gap: 10px;
 }
 
 .info_text .subtitle {
-  color: var(--violet);
+  color: var(--subtitle);
   font-weight: 600;
   font-size: 15px;
   letter-spacing: 0.02em;
@@ -33,15 +29,45 @@
   color: white;
   font-weight: 500;
   letter-spacing: -0.04em;
-  text-wrap: balance;
   line-height: 75px;
+  text-align: center;
+  max-width: 1100px;
+  text-wrap: balance;
 }
 
 .info_text p {
-  font-size: 18px;
-  color: white;
+  font-size: 20px;
+  color: rgb(209, 209, 209);
   font-weight: 400;
   line-height: 1.7em;
+  text-align: center;
+  max-width: 900px;
+}
+
+.caripelas {
+  display: flex;
+  flex-direction: row;
+  gap: 30px;
+  overflow-y: hidden;
+}
+
+.caripelas .cards {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 25px;
+}
+
+.cards span {
+  color: rgb(209, 209, 209);
+  font-family: var(--sora);
+  font-weight: 500;
+  font-size: 18px;
+  letter-spacing: -0.5px;
+}
+
+.caripelas .cards img {
+  border-radius: 30px;
 }
 
 @media (max-width: 1300px) {
