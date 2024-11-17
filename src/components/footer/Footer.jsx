@@ -1,8 +1,8 @@
+'use client'
 import Image from 'next/image'
 import styles from './Footer.module.css'
 import logo from '@/assets/images/hkNOUpX9NKkfNMGFjYql6SpzfQ.svg'
 import Link from 'next/link'
-import BarChart from '@/assets/icons/BarChart'
 import Facebook from '@/assets/icons/Facebook'
 import Linkedin from '@/assets/icons/Linkedin'
 import Instagram from '@/assets/icons/Instagram'
@@ -10,17 +10,49 @@ import Phone from '@/assets/icons/Phone'
 import Email from '@/assets/icons/Email'
 import Location from '@/assets/icons/Location'
 import Arrow from '@/assets/icons/Arrow'
+import { useEffect, useRef } from 'react'
+import { AnimateFooter } from './animateFooter'
 
 const Footer = () => {
+  const containerBannerRef = useRef(null)
+  const titleRef = useRef(null)
+  const descripotionRef = useRef(null)
+  const buttonRef = useRef(null)
+  const containerFooterRef = useRef(null)
+  const logoRef = useRef(null)
+  const navigationRef = useRef(null)
+  const contactInfoRef = useRef(null)
+  const socialMediaRef = useRef(null)
+  const lineRef = useRef(null)
+  const textRef = useRef(null)
+  const text_twoRef = useRef(null)
+
+  useEffect(() => {
+    AnimateFooter(
+      containerBannerRef.current,
+      titleRef.current,
+      descripotionRef.current,
+      buttonRef.current,
+      containerFooterRef.current,
+      logoRef.current,
+      navigationRef.current,
+      contactInfoRef.current,
+      socialMediaRef.current,
+      lineRef.current,
+      textRef.current,
+      text_twoRef.current
+    )
+  }, [])
+
   return (
     <footer className={styles.container}>
-      <div className={styles.info_text}>
-        <h2>Empower your business with innovative solutions</h2>
-        <p>
+      <div className={styles.info_text} ref={containerBannerRef}>
+        <h2 ref={titleRef}>Empower your business with innovative solutions</h2>
+        <p ref={descripotionRef}>
           Boost your business with innovative solutions and strengthen customer
           relationships.
         </p>
-        <div className={styles.button_contact}>
+        <div className={styles.button_contact} ref={buttonRef}>
           <button>
             Schedule Your Appointment
             <Arrow width='20px' height='20px' />
@@ -28,10 +60,10 @@ const Footer = () => {
         </div>
       </div>
       <div className={styles.line}></div>
-      <div className={styles.footer_cotainer}>
+      <div className={styles.footer_cotainer} ref={containerFooterRef}>
         <div className={styles.all_content}>
           <div className={styles.navigation_container}>
-            <div className={styles.logo}>
+            <div className={styles.logo} ref={logoRef}>
               <Image
                 src={logo}
                 alt='Logo'
@@ -41,7 +73,7 @@ const Footer = () => {
               />
               <p>Transform your business with SymbioNet.</p>
             </div>
-            <div className={styles.list_page}>
+            <div className={styles.list_page} ref={navigationRef}>
               <h5>Navigation</h5>
               <ul>
                 <Link href={'/'}>
@@ -58,7 +90,7 @@ const Footer = () => {
                 </Link>
               </ul>
             </div>
-            <div className={styles.list_contact}>
+            <div className={styles.list_contact} ref={contactInfoRef}>
               <h5>Contact</h5>
               <ul>
                 <Link href={'/'}>
@@ -78,7 +110,7 @@ const Footer = () => {
                 </Link>
               </ul>
             </div>
-            <div className={styles.list_social}>
+            <div className={styles.list_social} ref={socialMediaRef}>
               <h5>Follow us</h5>
               <ul>
                 <Link href={'/'}>
@@ -99,10 +131,10 @@ const Footer = () => {
               </ul>
             </div>
           </div>
-          <div className={styles.line}></div>
+          <div className={styles.line} ref={lineRef}></div>
           <div className={styles.copyright}>
-            <p>© 2023 SymbioNet. All rights reserved</p>
-            <p>
+            <p ref={textRef}>© 2023 SymbioNet. All rights reserved</p>
+            <p ref={text_twoRef}>
               Desing by <strong>SymbioNet</strong>
             </p>
           </div>

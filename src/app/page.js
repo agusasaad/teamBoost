@@ -3,16 +3,17 @@ import styles from './page.module.css'
 import AboutUs from '@/components/aboutUs/AboutUs'
 import TechStack from '@/components/techStack/TechStack'
 import ContactUs from '@/components/contactUs/ContactUs'
+import Solutions from '@/components/solutions/Solutions'
 
 export default function Home() {
   return (
     <div className={styles.page}>
       <Header />
-      {/* <main className={styles.main}>
-        <AboutUs />
+      <main className={styles.main}>
+        {/* <AboutUs /> */}
         <TechStack />
         <ContactUs />
-      </main> */}
+      </main>
     </div>
   )
 }

@@ -2,21 +2,24 @@
   width: 100%;
   height: auto;
   background-image: url('./../../assets/images/background.avif');
-  background-size: cover;
+  background-attachment: fixed;
   background-repeat: no-repeat;
-  background-position: center;
-  padding-top: 90px;
+  background-position: 20%;
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
 }
 
 .titles {
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
   gap: 20px;
-  padding: 60px 0px;
+  height: auto;
+  min-height: 100vh;
+  overflow: hidden;
 }
 
 .titles .subtitle {
@@ -69,88 +72,50 @@
   gap: 5px;
 }
 
-.solutions {
-  width: 90%;
-  max-width: 1200px;
+.titles .ranking {
   display: flex;
-  justify-content: space-around;
-  align-items: center;
-  margin-bottom: 60px;
-}
-
-.solutions .card {
+  flex-direction: row;
   width: 100%;
-  max-width: 380px;
-  padding: 25px;
-  background-color: rgba(248, 248, 249, 0.151);
-  border-radius: 20px;
+  max-width: 800px;
+  justify-content: space-evenly;
+  margin-top: 70px;
 }
 
-.solutions .card span {
+.titles .ranking div {
   display: flex;
-  justify-content: center;
+  flex-direction: column;
   align-items: center;
-  width: min-content;
-  padding: 6px;
-  background: var(--subtitle);
-  border-radius: 6px;
 }
 
-.card h3 {
+.titles .ranking div span {
+  font-size: 25px;
   font-family: var(--sora);
-  color: var(--title);
-  font-size: 22px;
-  font-weight: 500;
-  letter-spacing: -0.02em;
-  line-height: 1.1em;
-  margin: 25px 0px 10px 0px;
-}
-
-.card p {
-  color: var(--text);
-  font-weight: 400;
-  line-height: 1.6em;
-  font-size: 16px;
-  letter-spacing: 0px;
-}
-
-.card button {
-  border: none;
-  background-color: transparent;
-  font-family: var(--inter);
-  color: var(--title);
-  font-size: 18px;
-  font-weight: 500;
-  letter-spacing: 0;
-  line-height: 1.1em;
-  cursor: pointer;
-  display: flex;
-  align-items: center;
-  gap: 5px;
-  margin-top: 20px;
+  font-weight: 600;
+  color: white;
+  letter-spacing: -1px;
 }
 
 @media (max-width: 1300px) {
   .titles {
     width: 90%;
+    min-height: 90vh;
   }
 
   .titles h1 {
     font-size: 60px;
   }
-
-  .solutions {
-    flex-direction: column;
-    row-gap: 20px;
-  }
-
-  .solutions .card {
-    width: 100%;
-    max-width: 100%;
-  }
 }
 
 @media (max-width: 650px) {
+  .container {
+    background-size: cover;
+    background-attachment: scroll;
+  }
+
+  .titles {
+    min-height: none;
+    padding: 100px 0px 50px 0px;
+  }
   .titles h1 {
     font-size: 50px;
   }

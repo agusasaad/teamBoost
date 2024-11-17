@@ -16,6 +16,7 @@
   align-items: center;
   gap: 20px;
   padding: 100px 0px;
+  overflow-y: hidden;
 }
 
 .info_text .subtitle {
@@ -89,6 +90,7 @@
   flex-direction: row;
   justify-content: space-between;
   gap: 60px;
+  overflow: hidden;
 }
 
 .logo,
@@ -165,6 +167,7 @@
   flex-direction: row;
   width: 100%;
   justify-content: space-between;
+  overflow-x: hidden;
 }
 
 @media (max-width: 1300px) {
