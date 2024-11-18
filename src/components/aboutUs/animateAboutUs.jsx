@@ -34,10 +34,9 @@ export const AnimateAboutUs = (images) => {
   const timeline = gsap.timeline({
     scrollTrigger: {
       trigger: '#about',
-      start: 'top-=200 60%',
-      end: 'bottom bottom',
+      start: 'top 100%',
+      end: 'center+=400 bottom',
       scrub: 2,
-      // markers: true,
     },
   })
 
@@ -61,6 +60,7 @@ export const AnimateAboutUs = (images) => {
       opacity: 1,
       color: 'rgb(209, 209, 209)',
       stagger: 0.1, // Diferente velocidad para el párrafo
+      ease: 'none',
     }
   )
 

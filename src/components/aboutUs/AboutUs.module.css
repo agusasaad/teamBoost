@@ -2,11 +2,11 @@
   width: 100%;
   height: auto;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
-  flex-direction: column;
   gap: 50px;
-  padding: 100px 0px 200px 0px;
+  padding: 100px 0px 100px 0px;
 }
 
 .info_text {
@@ -14,6 +14,7 @@
   flex-direction: column;
   align-items: center;
   gap: 10px;
+  width: 90%;
 }
 
 .info_text .subtitle {
@@ -25,9 +26,9 @@
 
 .info_text h2 {
   font-family: var(--sora);
-  font-size: 55px;
+  font-size: 60px;
   color: white;
-  font-weight: 500;
+  font-weight: 400;
   letter-spacing: -0.04em;
   line-height: 75px;
   text-align: center;
@@ -45,10 +46,12 @@
 }
 
 .caripelas {
+  width: 100%;
   display: flex;
   flex-direction: row;
+  justify-content: center;
+  align-items: center;
   gap: 30px;
-  overflow-y: hidden;
 }
 
 .caripelas .cards {
@@ -56,6 +59,7 @@
   flex-direction: column;
   align-items: center;
   gap: 25px;
+  will-change: transform, opacity;
 }
 
 .cards span {
@@ -68,44 +72,43 @@
 
 .caripelas .cards img {
   border-radius: 30px;
+  width: 350px;
+  height: 450px;
+  object-fit: cover;
 }
 
-@media (max-width: 1300px) {
-  .container {
-    flex-direction: column-reverse;
-    max-width: 90%;
-    row-gap: 40px;
-  }
-
-  .container .image_about {
-    max-width: 100%;
-    width: 100%;
-    display: flex;
-    align-items: center;
-  }
-
-  .container .image_about img {
-    width: 100% !important;
-    height: auto !important;
+@media (max-width: 1200px) {
+  .caripelas .cards img {
     border-radius: 20px;
+    width: 90% !important;
+    height: auto !important;
   }
 }
 
-@media (max-width: 650px) {
+@media (max-width: 700px) {
   .container {
-    padding: 50px 0px;
-    row-gap: 30px;
+    gap: 20px;
   }
 
-  .info_text h2 {
-    font-size: 40px;
-    line-height: 55px;
+  .info_text p {
+    font-size: 18px;
+  }
+  .caripelas {
+    flex-direction: column-reverse;
+    gap: 15px;
+  }
+  .caripelas .cards {
+    gap: 10px;
+  }
+
+  .cards span {
+    display: none !important;
   }
 }
 
 @media (max-width: 470px) {
   .info_text h2 {
-    font-size: 35px;
-    line-height: 50px;
+    font-size: 40px;
+    line-height: normal;
   }
 }

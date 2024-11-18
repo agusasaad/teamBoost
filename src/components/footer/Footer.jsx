@@ -45,98 +45,102 @@ const Footer = () => {
   }, [])
 
   return (
-    <footer className={styles.container}>
-      <div className={styles.info_text} ref={containerBannerRef}>
-        <h2 ref={titleRef}>Empower your business with innovative solutions</h2>
-        <p ref={descripotionRef}>
-          Boost your business with innovative solutions and strengthen customer
-          relationships.
-        </p>
-        <div className={styles.button_contact} ref={buttonRef}>
-          <button>
-            Schedule Your Appointment
-            <Arrow width='20px' height='20px' />
-          </button>
-        </div>
-      </div>
-      <div className={styles.line}></div>
-      <div className={styles.footer_cotainer} ref={containerFooterRef}>
-        <div className={styles.all_content}>
-          <div className={styles.navigation_container}>
-            <div className={styles.logo} ref={logoRef}>
-              <Image
-                src={logo}
-                alt='Logo'
-                width={160}
-                height={100}
-                style={{ width: '160px', height: 'auto' }}
-              />
-              <p>Transform your business with SymbioNet.</p>
-            </div>
-            <div className={styles.list_page} ref={navigationRef}>
-              <h5>Navigation</h5>
-              <ul>
-                <Link href={'/'}>
-                  <li>Home</li>
-                </Link>
-                <Link href={'/'}>
-                  <li>Solutions</li>
-                </Link>
-                <Link href={'/'}>
-                  <li>Company</li>
-                </Link>
-                <Link href={'/'}>
-                  <li>Resources</li>
-                </Link>
-              </ul>
-            </div>
-            <div className={styles.list_contact} ref={contactInfoRef}>
-              <h5>Contact</h5>
-              <ul>
-                <Link href={'/'}>
-                  <li>
-                    <Phone width='18px' height='18px' /> +1 (123) 456-7890
-                  </li>
-                </Link>
-                <Link href={'/'}>
-                  <li>
-                    <Email width='18px' height='18px' /> symbionet@gmail.com
-                  </li>
-                </Link>
-                <Link href={'/'}>
-                  <li>
-                    <Location width='18px' height='18px' /> Cordoba, Argentina
-                  </li>
-                </Link>
-              </ul>
-            </div>
-            <div className={styles.list_social} ref={socialMediaRef}>
-              <h5>Follow us</h5>
-              <ul>
-                <Link href={'/'}>
-                  <li>
-                    <Facebook width='18px' height='18px' />
-                  </li>
-                </Link>
-                <Link href={'/'}>
-                  <li>
-                    <Linkedin width='18px' height='18px' />
-                  </li>
-                </Link>
-                <Link href={'/'}>
-                  <li>
-                    <Instagram width='18px' height='18px' />
-                  </li>
-                </Link>
-              </ul>
-            </div>
+    <footer className={styles.footer}>
+      <div className={styles.container}>
+        <div className={styles.info_text} ref={containerBannerRef}>
+          <h2 ref={titleRef}>
+            Empower your business with innovative solutions
+          </h2>
+          <p ref={descripotionRef}>
+            Boost your business with innovative solutions and strengthen
+            customer relationships.
+          </p>
+          <div className={styles.button_contact} ref={buttonRef}>
+            <button>
+              Schedule Your Appointment
+              <Arrow width='20px' height='20px' />
+            </button>
           </div>
-          <div className={styles.line} ref={lineRef}></div>
-          <div className={styles.copyright}>
-            <p ref={textRef}>© 2023 SymbioNet. All rights reserved</p>
-            <p ref={text_twoRef}>
-              Desing by <strong>SymbioNet.</strong>
-            </p>
+        </div>
+        <div className={styles.line}></div>
+        <div className={styles.footer_cotainer} ref={containerFooterRef}>
+          <div className={styles.all_content}>
+            <div className={styles.navigation_container}>
+              <div className={styles.logo} ref={logoRef}>
+                <Image
+                  src={logo}
+                  alt='Logo'
+                  width={160}
+                  height={100}
+                  style={{ width: '160px', height: 'auto' }}
+                />
+                <p>Transform your business with SymbioNet.</p>
+              </div>
+              <div className={styles.list_page} ref={navigationRef}>
+                <h5>Navigation</h5>
+                <ul>
+                  <Link href={'/'}>
+                    <li>Home</li>
+                  </Link>
+                  <Link href={'/'}>
+                    <li>Solutions</li>
+                  </Link>
+                  <Link href={'/'}>
+                    <li>Company</li>
+                  </Link>
+                  <Link href={'/'}>
+                    <li>Resources</li>
+                  </Link>
+                </ul>
+              </div>
+              <div className={styles.list_contact} ref={contactInfoRef}>
+                <h5>Contact</h5>
+                <ul>
+                  <Link href={'/'}>
+                    <li>
+                      <Phone width='18px' height='18px' /> +1 (123) 456-7890
+                    </li>
+                  </Link>
+                  <Link href={'/'}>
+                    <li>
+                      <Email width='18px' height='18px' /> symbionet@gmail.com
+                    </li>
+                  </Link>
+                  <Link href={'/'}>
+                    <li>
+                      <Location width='18px' height='18px' /> Cordoba, Argentina
+                    </li>
+                  </Link>
+                </ul>
+              </div>
+              <div className={styles.list_social} ref={socialMediaRef}>
+                <h5>Follow us</h5>
+                <ul>
+                  <Link href={'/'}>
+                    <li>
+                      <Facebook width='18px' height='18px' />
+                    </li>
+                  </Link>
+                  <Link href={'/'}>
+                    <li>
+                      <Linkedin width='18px' height='18px' />
+                    </li>
+                  </Link>
+                  <Link href={'/'}>
+                    <li>
+                      <Instagram width='18px' height='18px' />
+                    </li>
+                  </Link>
+                </ul>
+              </div>
+            </div>
+            <div className={styles.line} ref={lineRef}></div>
+            <div className={styles.copyright}>
+              <p ref={textRef}>© 2023 SymbioNet. All rights reserved</p>
+              <p ref={text_twoRef}>
+                Desing by <strong>SymbioNet.</strong>
+              </p>
+            </div>
           </div>
         </div>
       </div>

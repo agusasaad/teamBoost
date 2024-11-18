@@ -11,7 +11,7 @@ export default function Home() {
       <Header />
       <main className={styles.main}>
         <AboutUs />
-        <TechStack />
+        {/* <TechStack /> */}
         {/* <ContactUs /> */}
       </main>
     </div>

@@ -34,13 +34,7 @@ const NavBar = () => {
     <header className={styles.containerNav} ref={containerRef}>
       <nav className={`${styles.nav} ${showMenu ? styles.show : ''}`}>
         <div className={styles.logo} ref={logoRef}>
-          <Image
-            src={logo}
-            alt='Logo'
-            width={200}
-            height={200}
-            style={{ width: '200px', height: 'auto' }}
-          />
+          <Image src={logo} alt='Logo' width={200} height={200} />
         </div>
         <div className={styles.menu}>
           <ul>
