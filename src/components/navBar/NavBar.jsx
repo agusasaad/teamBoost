@@ -40,8 +40,8 @@ const NavBar = () => {
           <ul>
             <li ref={homeRef}>Home</li>
             <li ref={solutionsRef}>Solutions</li>
-            <li ref={companyRef}>Company</li>
-            <li ref={resourcesRef}>Resources</li>
+            <li ref={companyRef}>Tech Stack</li>
+            <li ref={resourcesRef}>About Us</li>
             <li ref={contactUsRef}>
               <button className={styles.button_contact}>Contact Us</button>
             </li>
