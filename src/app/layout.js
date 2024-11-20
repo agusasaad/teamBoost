@@ -3,7 +3,7 @@ import NavBar from '@/components/navBar/NavBar'
 import Footer from '@/components/footer/Footer'
 
 export const metadata = {
-  metadataBase: new URL('https://team-boost.vercel.app/'),
+  metadataBase: new URL('https://symbionet.vercel.app/'),
   title: 'SymbioNet. - Soluciones en Desarrollo Web, Consultoría IT y Automatización',
   description:
     'SymbioNet. ofrece desarrollo web personalizado, consultoría IT y soluciones de automatización de procesos para optimizar y transformar digitalmente tu negocio.',
@@ -18,7 +18,7 @@ export const metadata = {
     description:
       'Expertos en desarrollo web, consultoría IT y automatización de procesos. Impulsamos la transformación digital de tu negocio con soluciones a medida.',
     images: '/open-graph-image.jpeg',
-    url: 'https://team-boost.vercel.app/',
+    url: 'https://symbionet.vercel.app/',
     type: 'website',
     site_name: 'SymbioNet.',
   },
