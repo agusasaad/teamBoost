@@ -211,6 +211,11 @@
     gap: 30px;
   }
 
+  .info_text {
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+  }
+
   .navigation_container {
     gap: 50px;
   }
