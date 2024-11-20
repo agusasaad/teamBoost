@@ -8,6 +8,11 @@ import { animateFAQ } from './animateFaq'
 import Link from 'next/link'
 
 const Faq = () => {
+  const whatsappNumber = '5493518031826'
+  const message = encodeURIComponent(
+    'Hola, tengo algunas preguntas adicionales después de leer las preguntas frecuentes. ¿Podrían ayudarme con más detalles sobre sus servicios?'
+  )
+
   const [openIndex, setOpenIndex] = useState(null)
   const faqRefs = useRef([]) // Referencias para las respuestas
   const iconRefs = useRef([]) // Referencias para los íconos
@@ -101,7 +106,14 @@ const Faq = () => {
       </div>
       <div className={styles.final} ref={contact}>
         <p>
-          Have more questions? <Link href='/contact'>contact us</Link>
+          Have more questions?{' '}
+          <Link
+            href={`https://wa.me/${whatsappNumber}?text=${message}`}
+            target='_blank'
+            rel='noopener noreferrer'
+          >
+            contact us
+          </Link>
         </p>
       </div>
     </section>

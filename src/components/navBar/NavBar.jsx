@@ -8,6 +8,11 @@ import { AnimationNav } from './AnimationNav'
 import Link from 'next/link'
 
 const NavBar = () => {
+  const whatsappNumber = '5493518031826'
+  const message = encodeURIComponent(
+    'Hola, estoy interesado en los servicios de SymbioNet, como desarrollo web personalizado, consultoría IT y automatización de procesos. ¡Me gustaría recibir más información!'
+  )
+
   const [showMenu, setShowMenu] = useState(false)
   const containerRef = useRef(null)
   const navRef = useRef(null)
@@ -61,7 +66,9 @@ const NavBar = () => {
             </Link>
             <Link
               passHref
-              href={'https://calendly.com/fecotechsolutions/30min'}
+              href={`https://wa.me/${whatsappNumber}?text=${message}`}
+              target='_blank'
+              rel='noopener noreferrer'
               onClick={() => setShowMenu(false)}
             >
               <li ref={contactUsRef}>
