@@ -1,40 +1,41 @@
+'use client'
+import Plus from '@/assets/icons/Plus'
 import styles from './ContactUs.module.css'
+import { faqs } from './faq'
+import { useState } from 'react'
 
 const ContactUs = () => {
+  const [openIndex, setOpenIndex] = useState(null)
+
+  const handleToggle = (index) => {
+    // Si el índice ya está abierto, lo cerramos; de lo contrario, lo abrimos
+    setOpenIndex(openIndex === index ? null : index)
+  }
+
   return (
     <section className={styles.container}>
       <div className={styles.titles}>
-        <span className={styles.subtitle}>START YOUR PROCESS</span>
-        <h2>Share your ideas with us, and we&apos;ll make them a reality.</h2>
-        <div className={styles.steps_container}>
-          <h3>Get a quote in 3 simple steps.</h3>
-          <div className={styles.steps}>
-            <div className={styles.step_one}>
-              <span>01.</span>
-              <p>
-                We&apos;ll meet with you to get to know you, learn about your
-                project, and present the options and process we offer.
-              </p>
-            </div>
-            <div className={styles.step_one}>
-              <span>02.</span>
-              <p>
-                We&apos;ll take care of listing all the tasks that make up the
-                first deliverable of your project.
-              </p>
-            </div>
-            <div className={styles.step_one}>
-              <span>03.</span>
-              <p>
-                We&apos;ll present the proposal with all the functionalities of
-                your project, along with cost and time estimates, so we can
-                start working together.
-              </p>
-            </div>
-          </div>
-        </div>
+        <span className={styles.subtitle}>FAQ&apos;s</span>
+        <h2>Your Questions Answered</h2>
       </div>
-      <div className={styles.calendly_container}></div>
+      <div className={styles.faq}>
+        {faqs.map((faq, index) => (
+          <div
+            className={`${styles.question} ${
+              openIndex === index ? styles.show : ''
+            }`}
+            key={index}
+          >
+            <div className={styles.title_button}>
+              <h3>{faq.question}</h3>
+              <button onClick={() => handleToggle(index)}>
+                <Plus />
+              </button>
+            </div>
+            {openIndex === index && <p>{faq.answer}</p>}
+          </div>
+        ))}
+      </div>
     </section>
   )
 }
