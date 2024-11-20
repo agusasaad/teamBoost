@@ -102,7 +102,11 @@
 
   .menu ul {
     flex-direction: column;
-    gap: 45px;
+    gap: 40px;
+    margin-top: 10px;
+  }
+  .menu ul a {
+    width: 100%;
   }
 
   .menu ul li {

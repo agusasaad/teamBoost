@@ -61,7 +61,7 @@ const NavBar = () => {
             </Link>
             <Link
               passHref
-              href={'/#contact-us'}
+              href={'https://calendly.com/fecotechsolutions/30min'}
               onClick={() => setShowMenu(false)}
             >
               <li ref={contactUsRef}>

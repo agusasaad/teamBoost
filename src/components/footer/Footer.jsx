@@ -45,8 +45,8 @@ const Footer = () => {
   }, [])
 
   return (
-    <div className={styles.container_footer}>
-      <footer className={styles.container}>
+    <footer className={styles.container_footer}>
+      <div className={styles.container}>
         <div className={styles.info_text} ref={containerBannerRef}>
           <h2 ref={titleRef}>
             Empower your business with innovative solutions
@@ -56,10 +56,16 @@ const Footer = () => {
             customer relationships.
           </p>
           <div className={styles.button_contact} ref={buttonRef}>
-            <button>
-              Schedule Your Appointment
-              <Arrow width='20px' height='20px' />
-            </button>
+            <Link
+              passHref
+              href={'https://calendly.com/fecotechsolutions/30min'}
+              target='_blank'
+            >
+              <button>
+                Schedule Your Appointment
+                <Arrow width='20px' height='20px' />
+              </button>
+            </Link>
           </div>
         </div>
         <div className={styles.line}></div>
@@ -145,8 +151,8 @@ const Footer = () => {
             </div>
           </div>
         </div>
-      </footer>
-    </div>
+      </div>
+    </footer>
   )
 }
 

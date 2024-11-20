@@ -4,6 +4,7 @@ import styles from './Header.module.css'
 import Solutions from '../solutions/Solutions'
 import { useEffect, useRef } from 'react'
 import { AnimateHeader } from './AnimateHeader'
+import Link from 'next/link'
 const Header = () => {
   const subtitleRef = useRef(null)
   const titleRef = useRef(null)
@@ -32,10 +33,16 @@ const Header = () => {
           available in one place.
         </p>
         <div className={styles.button_contact} ref={buttonRef}>
-          <button>
-            Schedule Your Appointment
-            <Arrow width='20px' height='20px' />
-          </button>
+          <Link
+            passHref
+            href={'https://calendly.com/fecotechsolutions/30min'}
+            target='_blank'
+          >
+            <button>
+              Schedule Your Appointment
+              <Arrow width='20px' height='20px' />
+            </button>
+          </Link>
         </div>
         <div className={styles.ranking} ref={rankingRef}>
           <div>
