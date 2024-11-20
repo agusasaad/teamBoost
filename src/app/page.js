@@ -2,7 +2,7 @@ import Header from '@/components/header/Header'
 import styles from './page.module.css'
 import AboutUs from '@/components/aboutUs/AboutUs'
 import TechStack from '@/components/techStack/TechStack'
-import ContactUs from '@/components/contactUs/ContactUs'
+import Faq from '@/components/faq/Faq'
 
 export default function Home() {
   return (
@@ -21,7 +21,7 @@ export default function Home() {
       <div className={styles.sections}>
         <TechStack />
         <AboutUs />
-        <ContactUs />
+        <Faq />
       </div>
     </main>
   )
