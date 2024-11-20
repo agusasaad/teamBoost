@@ -3,7 +3,7 @@ import './globals.css'
 import Footer from '@/components/footer/Footer'
 
 export const metadata = {
-  title: 'Team Boost',
+  title: 'SymbioNet',
   description:
     'Create beautiful and dynamic websites with TeamBoost, offering personalized services and cutting-edge solutions for high-quality web development.',
 }

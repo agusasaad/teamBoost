@@ -21,7 +21,7 @@ export default function Home() {
       <div className={styles.sections}>
         <TechStack />
         <AboutUs />
-        {/* <ContactUs /> */}
+        <ContactUs />
       </div>
     </main>
   )
