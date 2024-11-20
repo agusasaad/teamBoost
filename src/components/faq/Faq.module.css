@@ -7,7 +7,7 @@
   justify-content: center;
   align-items: center;
   gap: 30px;
-  padding-bottom: 150px;
+  padding-bottom: 100px;
 }
 
 .titles {
@@ -125,7 +125,7 @@
 @media (max-width: 650px) {
   .container {
     gap: 20px;
-    padding-bottom: 50px;
+    padding-bottom: 80px;
   }
   .titles h2 {
     font-size: 50px;

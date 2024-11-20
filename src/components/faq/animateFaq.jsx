@@ -1,10 +1,16 @@
 import gsap from 'gsap'
 import { ScrollTrigger } from 'gsap/all'
 
-export const animateFAQ = (container, subtitle, title, containerFAQ) => {
+export const animateFAQ = (
+  container,
+  subtitle,
+  title,
+  containerFAQ,
+  contact
+) => {
   gsap.registerPlugin(ScrollTrigger)
   gsap.fromTo(
-    [subtitle, title, containerFAQ],
+    [subtitle, title, containerFAQ, contact],
     {
       opacity: 0,
       y: 200,

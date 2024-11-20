@@ -1,5 +1,9 @@
+.container_footer {
+  display: flex;
+  justify-content: center;
+}
 .container {
-  width: 100%;
+  width: 99%;
   display: flex;
   flex-direction: column;
   color: white;
@@ -17,6 +21,8 @@
   gap: 20px;
   padding: 100px 0px;
   overflow-y: hidden;
+  border-top-left-radius: 40px;
+  border-top-right-radius: 40px;
 }
 
 .info_text .subtitle {

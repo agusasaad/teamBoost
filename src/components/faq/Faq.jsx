@@ -15,13 +15,15 @@ const Faq = () => {
   const subtitle = useRef(null)
   const title = useRef(null)
   const containerFAQ = useRef(null)
+  const contact = useRef(null)
 
   useEffect(() => {
     animateFAQ(
       container.current,
       subtitle.current,
       title.current,
-      containerFAQ.current
+      containerFAQ.current,
+      contact.current
     )
   }, [])
 
@@ -97,7 +99,7 @@ const Faq = () => {
           </div>
         ))}
       </div>
-      <div className={styles.final}>
+      <div className={styles.final} ref={contact}>
         <p>
           Have more questions? <Link href='/contact'>contact us</Link>
         </p>
