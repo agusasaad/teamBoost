@@ -24,7 +24,7 @@ const Header = () => {
     <div className={styles.container} id='home'>
       <div className={styles.titles}>
         <span className={styles.subtitle} ref={subtitleRef}>
-          TECHNOLOGICAL SOLUTIONS
+          <span className={styles.circle}></span> Technological Solutions
         </span>
         <h1 ref={titleRef}>We Guide and Develop Your Digital Transformation</h1>
         <p ref={descriptionRef}>

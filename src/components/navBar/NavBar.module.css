@@ -43,9 +43,8 @@
 }
 
 .menu ul li .button_contact {
-  background: transparent;
-  border: none;
-  border: 1px solid var(--white);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  background: #86868634;
   padding: 10px 25px;
   border-radius: 15px;
   color: white;
@@ -116,7 +115,7 @@
   .menu ul li .button_contact {
     width: 100%;
     border: 0px;
-    background-color: var(--button);
+    background-color: #5e60f7;
     font-family: var(--inter);
     color: var(--white);
     font-size: 15px;

@@ -6,7 +6,6 @@
   justify-content: center;
   align-items: center;
   gap: 50px;
-  padding: 100px 0px 100px 0px;
 }
 
 .info_text {
@@ -18,10 +17,31 @@
 }
 
 .info_text .subtitle {
-  color: var(--subtitle);
+  color: white;
+  font-weight: 400;
+  font-size: 16px;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  padding: 7px 20px;
+  border-radius: 30px;
+  background: #86868634;
+  backdrop-filter: blur(10px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.circle {
+  width: 8px;
+  height: 8px;
+  background: #10b981;
+  border-radius: 50%;
+  margin-right: 7px;
+}
+
+.subtitle strong {
+  margin-left: 4px;
+  font-family: var(--sora);
   font-weight: 600;
-  font-size: 15px;
-  letter-spacing: 0.02em;
 }
 
 .info_text h2 {
@@ -42,7 +62,8 @@
   font-weight: 400;
   line-height: 1.7em;
   text-align: center;
-  max-width: 900px;
+  max-width: 1000px;
+  text-wrap: balance;
 }
 
 .caripelas {
@@ -51,64 +72,114 @@
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  gap: 30px;
+  gap: 20px;
 }
 
 .caripelas .cards {
+  width: 400px;
+  height: auto;
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 25px;
   will-change: transform, opacity;
+  position: relative;
+  border-radius: 30px;
+  overflow: hidden;
+}
+
+.info_caripela {
+  background: linear-gradient(
+    0deg,
+    rgba(11, 11, 11, 1) 0%,
+    rgba(11, 11, 11, 0) 100%
+  );
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 20px;
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-start;
+  padding: 30px;
+  opacity: 0;
+  transition: opacity 0.4s ease-in-out;
+}
+
+.info_caripela:hover {
+  opacity: 1;
 }
 
 .cards span {
-  color: rgb(209, 209, 209);
   font-family: var(--sora);
+  color: var(--title);
+  font-size: 20px;
   font-weight: 500;
-  font-size: 18px;
-  letter-spacing: -0.5px;
+  letter-spacing: -0.02em;
+  line-height: 1.1em;
 }
 
 .caripelas .cards img {
-  border-radius: 30px;
-  width: 350px;
-  height: 450px;
+  width: 100%;
+  height: auto;
   object-fit: cover;
 }
 
 @media (max-width: 1200px) {
+  .caripelas .cards {
+    width: 30%;
+  }
+
   .caripelas .cards img {
     border-radius: 20px;
-    width: 90% !important;
-    height: auto !important;
+
+    object-fit: fill;
+  }
+
+  .info_text h2 {
+    font-size: 55px;
   }
 }
 
-@media (max-width: 700px) {
+@media (max-width: 768px) {
   .container {
     gap: 20px;
+    padding-bottom: 100px;
+  }
+
+  .subtitle strong {
+    font-family: var(--inter);
+    font-weight: 400;
   }
 
   .info_text p {
     font-size: 18px;
+    text-wrap: balance;
+    text-align: center;
   }
   .caripelas {
     flex-direction: column-reverse;
+    align-items: center;
     gap: 15px;
+    width: 90%;
   }
   .caripelas .cards {
-    gap: 10px;
-  }
-
-  .cards span {
-    display: none !important;
+    width: 100%;
+    box-shadow: 0px 0px 40px -9px rgba(0, 0, 0, 0.75);
   }
 }
 
-@media (max-width: 470px) {
+@media (max-width: 650px) {
   .info_text h2 {
-    font-size: 40px;
-    line-height: normal;
+    display: none;
+  }
+  .info_text p {
+    display: none;
+  }
+
+  .caripelas .cards {
+    width: 100%;
   }
 }

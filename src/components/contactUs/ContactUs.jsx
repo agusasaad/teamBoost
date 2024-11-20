@@ -2,7 +2,7 @@ import styles from './ContactUs.module.css'
 
 const ContactUs = () => {
   return (
-    <div className={styles.container}>
+    <section className={styles.container}>
       <div className={styles.titles}>
         <span className={styles.subtitle}>START YOUR PROCESS</span>
         <h2>Share your ideas with us, and we&apos;ll make them a reality.</h2>
@@ -35,7 +35,7 @@ const ContactUs = () => {
         </div>
       </div>
       <div className={styles.calendly_container}></div>
-    </div>
+    </section>
   )
 }
 

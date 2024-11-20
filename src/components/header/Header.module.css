@@ -1,10 +1,8 @@
 .container {
-  width: 99%;
+  width: 100%;
   height: auto;
-  background-image: url('./../../assets/images/background.avif');
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
+  background: rgb(0, 0, 0);
+  background: linear-gradient(0deg, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 0) 100%);
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -25,10 +23,24 @@
 }
 
 .titles .subtitle {
-  color: var(--subtitle);
-  font-weight: 600;
+  color: white;
+  font-weight: 400;
   font-size: 16px;
-  letter-spacing: 0.02em;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  background: #86868634;
+  padding: 7px 20px;
+  border-radius: 30px;
+  backdrop-filter: blur(10px);
+  display: flex;
+  align-items: center;
+  gap: 7px;
+}
+
+.circle {
+  width: 8px;
+  height: 8px;
+  background: #10b981;
+  border-radius: 50%;
 }
 
 .titles h1 {
@@ -60,7 +72,7 @@
 
 .titles .button_contact button {
   border: none;
-  background-color: var(--button);
+  background-color: #5e60f7;
   font-family: var(--inter);
   color: var(--white);
   font-size: 18px;
@@ -118,7 +130,7 @@
   }
 
   .titles {
-    padding: 150px 0px 100px 0px;
+    padding: 150px 0px 80px 0px;
   }
   .titles h1 {
     font-size: 50px;

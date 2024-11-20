@@ -1,13 +1,5 @@
-.footer {
-  width: 100%;
-  height: auto;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
 .container {
-  width: 99%;
+  width: 100%;
   display: flex;
   flex-direction: column;
   color: white;
@@ -15,7 +7,7 @@
 
 .info_text {
   width: 100%;
-  background-image: url('./../../assets/images/background.avif');
+  background-image: url('./../../assets/images/footer.png');
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
@@ -25,8 +17,6 @@
   gap: 20px;
   padding: 100px 0px;
   overflow-y: hidden;
-  border-top-left-radius: 40px;
-  border-top-right-radius: 40px;
 }
 
 .info_text .subtitle {
@@ -65,7 +55,7 @@
 
 .button_contact button {
   border: none;
-  background-color: var(--button);
+  background-color: #5e60f7;
   font-family: var(--inter);
   color: var(--white);
   font-size: 18px;
@@ -154,7 +144,8 @@
 }
 
 .list_social ul li {
-  border: 1px solid var(--violet);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  background: #86868611;
   display: flex;
   align-items: center;
   padding: 10px;
@@ -183,6 +174,7 @@
 @media (max-width: 1300px) {
   .info_text {
     width: 100%;
+    background-size: 300%;
   }
 
   .info_text h2 {

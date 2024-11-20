@@ -1,40 +1,56 @@
 import gsap from 'gsap'
 import { ScrollTrigger } from 'gsap/all'
 
-export const AnimateAboutUs = (images) => {
+export const AnimateAboutUs = (subtitle, title, text, images, caripelas) => {
   gsap.registerPlugin(ScrollTrigger)
 
   // Animación para el título
-  const titleElement = document.querySelector('.title_about')
-  const titleLetters = titleElement.textContent.split('')
-  titleElement.textContent = ''
+  const titleLetters = title.textContent.split('')
+  title.textContent = ''
   titleLetters.forEach((letter) => {
     const span = document.createElement('span')
     span.textContent = letter === ' ' ? '\u00A0' : letter
     span.style.display = 'inline-block'
-    titleElement.appendChild(span)
+    title.appendChild(span)
   })
 
-  const titleSpans = titleElement.querySelectorAll('span')
+  const titleSpans = title.querySelectorAll('span')
 
   // Animación para el párrafo
-  const paragraphElement = document.querySelector('.text_about')
-  const paragraphLetters = paragraphElement.textContent.split('')
-  paragraphElement.textContent = ''
+  const paragraphLetters = text.textContent.split('')
+  text.textContent = ''
   paragraphLetters.forEach((letter) => {
     const span = document.createElement('span')
     span.textContent = letter === ' ' ? '\u00A0' : letter
     span.style.display = 'inline-block'
-    paragraphElement.appendChild(span)
+    text.appendChild(span)
   })
 
-  const paragraphSpans = paragraphElement.querySelectorAll('span')
+  const paragraphSpans = text.querySelectorAll('span')
+
+  gsap.fromTo(
+    [subtitle, title, text, images],
+    { opacity: 0, y: 200 },
+    {
+      opacity: 1,
+      y: 0,
+      duration: 0.7,
+      ease: 'power1',
+      stagger: 0.1,
+      scrollTrigger: {
+        trigger: '#about',
+        start: 'top 70%',
+        end: 'bottom',
+        // markers: true,
+      },
+    }
+  )
 
   // Crear un timeline para ambas animaciones
   const timeline = gsap.timeline({
     scrollTrigger: {
       trigger: '#about',
-      start: 'top 100%',
+      start: 'top 70%',
       end: 'center+=400 bottom',
       scrub: 2,
     },
@@ -61,24 +77,6 @@ export const AnimateAboutUs = (images) => {
       color: 'rgb(209, 209, 209)',
       stagger: 0.1, // Diferente velocidad para el párrafo
       ease: 'none',
-    }
-  )
-
-  gsap.fromTo(
-    images,
-    { opacity: 0, y: 100 },
-    {
-      opacity: 1,
-      y: 0,
-      duration: 0.7,
-      ease: 'power1',
-      stagger: 0.2,
-      scrollTrigger: {
-        trigger: '#about',
-        start: 'top+=200 50%',
-        end: 'bottom',
-        // markers: true,
-      },
     }
   )
 }

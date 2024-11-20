@@ -12,48 +12,48 @@ export const techStackData = [
     title: 'Frontend Development',
     description:
       'Expert guidance to optimize your IT infrastructure and strategy, ensuring alignment with your business goals.',
-    icon: <FrontEnd width='30px' height='30px' />,
+    icon: <FrontEnd width='30px' height='30px' color='white' />,
   },
   {
     title: 'Backend Development',
     description:
       'Custom web development solutions to build responsive, high-performance websites that engage and convert your audience.',
-    icon: <BackEnd width='30px' height='30px' />,
+    icon: <BackEnd width='30px' height='30px' color='white' />,
   },
   {
     title: 'Infrastructure',
     description:
       'Streamline your operations with automation solutions that reduce manual work and increase efficiency.',
-    icon: <Infrastructure width='30px' height='30px' />,
+    icon: <Infrastructure width='30px' height='30px' color='white' />,
   },
   {
     title: 'Storage',
     description:
       'Expert guidance to optimize your IT infrastructure and strategy, ensuring alignment with your business goals.',
-    icon: <Storage width='30px' height='30px' />,
+    icon: <Storage width='30px' height='30px' color='white' />,
   },
   {
     title: 'CRM',
     description:
       'Custom web development solutions to build responsive, high-performance websites that engage and convert your audience.',
-    icon: <Crm width='30px' height='30px' />,
+    icon: <Crm width='30px' height='30px' color='white' />,
   },
   {
     title: 'Automation And Integration Technologies',
     description:
       'Streamline your operations with automation solutions that reduce manual work and increase efficiency.',
-    icon: <Gears width='30px' height='30px' />,
+    icon: <Gears width='30px' height='30px' color='white' />,
   },
   {
     title: 'Product Analisis And Desing',
     description:
       'Custom web development solutions to build responsive, high-performance websites that engage and convert your audience.',
-    icon: <MagnifyingGlass width='30px' height='30px' />,
+    icon: <MagnifyingGlass width='30px' height='30px' color='white' />,
   },
   {
     title: 'UX/UI Research and analysis',
     description:
       'Streamline your operations with automation solutions that reduce manual work and increase efficiency.',
-    icon: <UxUi width='30px' height='30px' />,
+    icon: <UxUi width='30px' height='30px' color='white' />,
   },
 ]

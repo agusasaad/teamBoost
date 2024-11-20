@@ -7,9 +7,14 @@ import { useEffect, useRef, useState } from 'react'
 
 const TechStack = () => {
   const container = useRef(null)
+  const subtitle = useRef(null)
+  const title = useRef(null)
   const card_container = useRef(null)
   const carrucel = useRef(null)
   const card = useRef([])
+
+  const [isMobile, setIsMobile] = useState(false)
+
   const [containerHeight, setContainerHeight] = useState(0)
 
   useEffect(() => {
@@ -24,6 +29,34 @@ const TechStack = () => {
     const adjustedHeight = container.current.offsetHeight + total
     setContainerHeight(adjustedHeight + 200)
 
+    const handleResize = () => {
+      setIsMobile(window.innerWidth < 768)
+    }
+
+    // Comprobar el tamaño inicial y agregar un listener
+    handleResize()
+    window.addEventListener('resize', handleResize)
+
+    gsap.fromTo(
+      [title.current, card_container.current],
+      {
+        y: 200,
+        opacity: 0,
+      },
+      {
+        y: 0,
+        opacity: 1,
+        duration: 0.7,
+        ease: 'power1',
+        stagger: 0.1,
+        scrollTrigger: {
+          trigger: container.current,
+          start: 'top-=200 70%',
+          end: 'bottom',
+        },
+      }
+    )
+    if (window.innerWidth < 768) return
     gsap.to(carrucel.current, {
       x: -total,
       ease: 'none',
@@ -31,30 +64,37 @@ const TechStack = () => {
         trigger: container.current,
         pin: true,
         scrub: 1,
-        start: 'top-=250 top',
+        start: 'top-=200 top',
         end: () => '+=' + total,
-        pinSpacing: true, // Mantiene un espacio suave al soltar el pin
+        pinSpacing: true,
         onLeave: () => {
           gsap.to(container.current, {
-            duration: 1, // Duración de la animación de soltar
-            ease: 'power1.out', // Transición más suave
+            duration: 1,
+            ease: 'power1.out',
           })
         },
       },
     })
+
+    // Limpieza del listener
+    return () => {
+      window.removeEventListener('resize', handleResize)
+    }
   }, [])
 
   return (
     <section
       className={styles.container}
-      style={{ height: `${containerHeight}px` }}
+      style={{
+        height: isMobile ? 'auto' : `${containerHeight}px`,
+      }}
     >
       <div className={styles.total_content} ref={container}>
-        <div className={styles.title}>
-          <h2>Our Tech Stack</h2>
+        <div className={styles.title} ref={title}>
+          <h2>Technology Stack</h2>
           <p>
             Our software development toolkit is constantly updated to ensure
-            quality and excellence.
+            quality, innovation, and excellence.
           </p>
         </div>
         <div className={styles.card_container} ref={card_container}>

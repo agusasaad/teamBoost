@@ -43,8 +43,7 @@ export const AnimationNav = (
       backgroundColor: 'rgba(0, 0, 0, 0)',
     },
     {
-      background:
-        'linear-gradient( 0deg,rgba(0, 0, 0, 0) 0%,rgba(0, 0, 0, 0.6895133053221288) 50%,rgba(0, 0, 0, 0.8995973389355743) 72%,rgba(0, 0, 0, 1) 95%)',
+      background: 'linear-gradient(0deg, rgba(0,0,0,0) 0%, rgba(0,0,0,1) 100%)',
       duration: 2,
       ease: 'power3.out',
       scrollTrigger: {
