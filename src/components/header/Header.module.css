@@ -19,7 +19,7 @@
   gap: 20px;
   height: auto;
   overflow: hidden;
-  min-height: 100vh;
+  padding: 200px 0px 200px 0px;
 }
 
 .titles .subtitle {
@@ -122,9 +122,14 @@
   }
 }
 
-@media (max-width: 650px) {
+@media (max-width: 850px) {
   .container {
     background-size: cover;
+  }
+
+  .titles {
+    min-height: auto;
+    padding: 150px 0px 100px 0px;
   }
 
   .titles h1 {
