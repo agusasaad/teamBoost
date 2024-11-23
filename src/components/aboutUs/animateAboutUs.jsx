@@ -33,7 +33,7 @@ export const AnimateAboutUs = (title, text, caripelas) => {
       opacity: 1,
       filter: 'blur(0px)',
       duration: 1,
-      stagger: 0.2,
+      stagger: 0.1,
       ease: 'power1',
       scrollTrigger: {
         trigger: '#about',
