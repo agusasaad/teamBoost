@@ -134,9 +134,16 @@
 
   .titles h1 {
     font-size: 50px;
+    line-height: 65px;
   }
   .titles .ranking {
     display: none;
+  }
+}
+@media (max-width: 650px) {
+  .titles h1 {
+    font-size: 50px;
+    line-height: 65px;
   }
 }
 
@@ -147,6 +154,7 @@
 
   .titles h1 {
     font-size: 40px;
+    line-height: 55px;
   }
 
   .titles p {
