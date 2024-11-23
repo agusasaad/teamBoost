@@ -13,7 +13,7 @@ const Faq = () => {
     'Hola, tengo algunas preguntas adicionales después de leer las preguntas frecuentes. ¿Podrían ayudarme con más detalles sobre sus servicios?'
   )
 
-  const [openIndex, setOpenIndex] = useState(null)
+  const [openIndexes, setOpenIndexes] = useState([]) // Array para las FAQs abiertas
   const faqRefs = useRef([]) // Referencias para las respuestas
   const iconRefs = useRef([]) // Referencias para los íconos
   const container = useRef(null)
@@ -33,39 +33,38 @@ const Faq = () => {
   }, [])
 
   const handleToggle = (index) => {
-    const isOpen = openIndex === index
+    const isOpen = openIndexes.includes(index)
 
     if (isOpen) {
-      // Cerrar FAQ
+      // Cerrar FAQ con animación suave
       const element = faqRefs.current[index]
       gsap.to(element, {
         height: 0,
         duration: 0.5,
-        onComplete: () => setOpenIndex(null), // Cambia el estado al terminar la animación
+        ease: 'power2.inOut',
+        onComplete: () => {
+          setOpenIndexes((prev) => prev.filter((i) => i !== index)) // Eliminar del array después del cierre
+        },
       })
-      // Rotar el ícono de regreso
       gsap.to(iconRefs.current[index], {
         rotate: 0,
         duration: 0.5,
+        ease: 'power2.inOut',
       })
     } else {
-      // Abrir FAQ
+      // Abrir FAQ con animación suave
       const element = faqRefs.current[index]
-      setOpenIndex(index) // Cambia el estado para abrir
-      gsap.fromTo(element, { height: 0 }, { height: 'auto', duration: 0.5 })
-      // Rotar el ícono 45 grados
+      setOpenIndexes((prev) => [...prev, index]) // Añadir al array antes de abrir
+      gsap.fromTo(
+        element,
+        { height: 0 },
+        { height: 'auto', duration: 0.5, ease: 'power2.inOut' }
+      )
       gsap.to(iconRefs.current[index], {
         rotate: 45,
         duration: 0.5,
+        ease: 'power2.inOut',
       })
-
-      // Resetear el ícono de cualquier otro abierto
-      if (openIndex !== null) {
-        gsap.to(iconRefs.current[openIndex], {
-          rotate: 0,
-          duration: 0.5,
-        })
-      }
     }
   }
 
@@ -79,10 +78,14 @@ const Faq = () => {
       </div>
       <div className={styles.faq} ref={containerFAQ}>
         {faqs.map((faq, index) => (
-          <div className={`${styles.question}`} key={index}>
+          <div
+            className={`${styles.question}`}
+            key={index}
+            onClick={() => handleToggle(index)}
+          >
             <div className={styles.title_button}>
               <h3>{faq.question}</h3>
-              <button onClick={() => handleToggle(index)}>
+              <button>
                 <div
                   ref={(el) => (iconRefs.current[index] = el)}
                   style={{ display: 'inline-block' }}
@@ -95,7 +98,7 @@ const Faq = () => {
               className={styles.answer}
               ref={(el) => (faqRefs.current[index] = el)}
               style={{
-                height: openIndex === index ? 'auto' : 0,
+                height: 0,
                 overflow: 'hidden',
               }}
             >

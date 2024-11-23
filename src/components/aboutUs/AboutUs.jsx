@@ -20,13 +20,7 @@ const AboutUs = () => {
   const images = useRef([])
 
   useEffect(() => {
-    AnimateAboutUs(
-      subtitle.current,
-      title.current,
-      text.current,
-      images.current,
-      caripelas.current
-    )
+    AnimateAboutUs(title.current, text.current, caripelas.current)
   }, [])
 
   return (

@@ -5,7 +5,6 @@
   flex-direction: column;
   align-items: center;
   gap: 50px;
-  padding-bottom: 200px;
 }
 
 .title h2 {
@@ -84,10 +83,6 @@
 }
 
 @media (max-width: 1300px) {
-  .container {
-    padding-bottom: 150px;
-  }
-
   .title h2 {
     font-size: 55px;
   }
@@ -106,7 +101,6 @@
 @media (max-width: 650px) {
   .container {
     gap: 20px;
-    padding-bottom: 0px;
   }
   .title h2 {
     font-size: 50px;
