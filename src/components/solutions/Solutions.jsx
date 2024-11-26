@@ -30,7 +30,7 @@ const Solutions = () => {
             <p>{item.text}</p>
             <div>
               <button>
-                Learn More <Arrow width="20px" height="20px" />
+                Para saber mas <Arrow width="20px" height="20px" />
               </button>
             </div>
           </div>
