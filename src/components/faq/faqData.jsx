@@ -1,16 +1,16 @@
 export const faqs = [
   {
-    question: "What does SymbioNet's IT Consulting service include?",
+    question: "¿Qué incluye el servicio de Consultoría en TI de SymbioNet?",
     answer:
-      'At SymbioNet, we analyze and optimize your technological infrastructure to ensure your systems align with your business goals. We offer audits, implementation strategies, and ongoing support.',
+      'En SymbioNet, analizamos y optimizamos tu infraestructura tecnológica para asegurar que tus sistemas se alineen con los objetivos de tu negocio. Ofrecemos auditorías, estrategias de implementación y soporte continuo.',
   },
   {
-    question: 'What types of web solutions does SymbioNet develop?',
+    question: '¿Qué tipos de soluciones web desarrolla SymbioNet?',
     answer:
-      'We create custom web solutions, including enterprise applications and platforms optimized for performance and user experience. Our focus is on responsive design and tailored functionality.',
+      'Creemos soluciones web personalizadas, incluyendo aplicaciones empresariales y plataformas optimizadas para el rendimiento y la experiencia del usuario. Nos enfocamos en un diseño responsivo y funcionalidades a medida.',
   },
   {
-    question: 'How can SymbioNet help with process automation?',
+    question: '¿Cómo puede SymbioNet ayudar con la automatización de procesos?',
     answer:
       'SymbioNet implements solutions to reduce manual tasks through custom software, increasing operational efficiency, minimizing errors, and allowing your team to focus on strategic tasks.',
   },

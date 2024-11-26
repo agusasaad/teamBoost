@@ -1,59 +1,59 @@
-import BackEnd from '@/assets/icons/BackEnd'
-import Crm from '@/assets/icons/Crm'
-import FrontEnd from '@/assets/icons/FrontEnd'
-import Gears from '@/assets/icons/Gears'
-import Infrastructure from '@/assets/icons/Infrastructure'
-import MagnifyingGlass from '@/assets/icons/MagnifyingGlass'
-import Storage from '@/assets/icons/Storage'
-import UxUi from '@/assets/icons/UxUi'
+import BackEnd from "@/assets/icons/BackEnd";
+import Crm from "@/assets/icons/Crm";
+import FrontEnd from "@/assets/icons/FrontEnd";
+import Gears from "@/assets/icons/Gears";
+import Infrastructure from "@/assets/icons/Infrastructure";
+import MagnifyingGlass from "@/assets/icons/MagnifyingGlass";
+import Storage from "@/assets/icons/Storage";
+import UxUi from "@/assets/icons/UxUi";
 
 export const techStackData = [
   {
-    title: 'Frontend Development',
+    title: "Desarrollo Frontend",
     description:
-      'Expert guidance to optimize your IT infrastructure and strategy, ensuring alignment with your business goals.',
-    icon: <FrontEnd width='30px' height='30px' color='white' />,
+      "Orientación experta para optimizar tu infraestructura y estrategia de TI, asegurando su alineación con los objetivos de tu negocio.",
+    icon: <FrontEnd width="30px" height="30px" color="white" />,
   },
   {
-    title: 'Backend Development',
+    title: "Desarrollo Backend",
     description:
-      'Custom web development solutions to build responsive, high-performance websites that engage and convert your audience.',
-    icon: <BackEnd width='30px' height='30px' color='white' />,
+      "Soluciones de desarrollo web a medida para crear sitios web responsivos y de alto rendimiento que atraigan y conviertan a tu audiencia.",
+    icon: <BackEnd width="30px" height="30px" color="white" />,
   },
   {
-    title: 'Infrastructure',
+    title: "infraestructura",
     description:
-      'Streamline your operations with automation solutions that reduce manual work and increase efficiency.',
-    icon: <Infrastructure width='30px' height='30px' color='white' />,
+      "Agiliza tus operaciones con soluciones de automatización que reducen el trabajo manual y aumentan la eficiencia.",
+    icon: <Infrastructure width="30px" height="30px" color="white" />,
   },
   {
-    title: 'Storage',
+    title: "Almacenamiento",
     description:
-      'Expert guidance to optimize your IT infrastructure and strategy, ensuring alignment with your business goals.',
-    icon: <Storage width='30px' height='30px' color='white' />,
+      "Soluciones avanzadas para gestionar y proteger tus datos de manera eficiente, garantizando accesibilidad y seguridad a largo plazo.",
+    icon: <Storage width="30px" height="30px" color="white" />,
   },
   {
-    title: 'CRM',
+    title: "CRM",
     description:
-      'Custom web development solutions to build responsive, high-performance websites that engage and convert your audience.',
-    icon: <Crm width='30px' height='30px' color='white' />,
+      "Soluciones para gestionar y optimizar las relaciones con tus clientes, centralizando la información y mejorando la comunicación.",
+    icon: <Crm width="30px" height="30px" color="white" />,
   },
   {
-    title: 'Automation And Integration Technologies',
+    title: "Tecnologías de Automatización e Integración",
     description:
-      'Streamline your operations with automation solutions that reduce manual work and increase efficiency.',
-    icon: <Gears width='30px' height='30px' color='white' />,
+      "Agiliza tus operaciones con soluciones de automatización que reducen el trabajo manual y aumentan la eficiencia.",
+    icon: <Gears width="30px" height="30px" color="white" />,
   },
   {
-    title: 'Product Analisis And Desing',
+    title: "Product Analisis And Desing",
     description:
-      'Custom web development solutions to build responsive, high-performance websites that engage and convert your audience.',
-    icon: <MagnifyingGlass width='30px' height='30px' color='white' />,
+      "Comprendemos y transformamos las necesidades de nuestros clientes en soluciones tecnológicas innovadoras.",
+    icon: <MagnifyingGlass width="30px" height="30px" color="white" />,
   },
   {
-    title: 'UX/UI Research and analysis',
+    title: "UX/UI Research and analysis",
     description:
-      'Streamline your operations with automation solutions that reduce manual work and increase efficiency.',
-    icon: <UxUi width='30px' height='30px' color='white' />,
+      "Diseño de interfaces intuitivas, fáciles de usar y visualmente atractivas, asegurando un producto funcional y optimizado.",
+    icon: <UxUi width="30px" height="30px" color="white" />,
   },
-]
+];

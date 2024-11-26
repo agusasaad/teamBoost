@@ -16,7 +16,7 @@ const Solutions = () => {
   return (
     <div className={styles.container} ref={containerRef} id="solutions">
       <div className={styles.title} ref={title}>
-        <h2>Our Solutions</h2>
+        <h2>Nuestras Soluciones</h2>
       </div>
       <div className={styles.solutions}>
         {solutionsData.map((item, index) => (
