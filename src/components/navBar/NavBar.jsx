@@ -1,28 +1,28 @@
-'use client'
-import { useEffect, useRef, useState } from 'react'
-import styles from './NavBar.module.css'
-import Hamburguer from '@/assets/icons/Hamburguer'
-import Image from 'next/image'
-import logo from '@/assets/images/logo_3.svg'
-import { AnimationNav } from './AnimationNav'
-import Link from 'next/link'
+"use client";
+import { useEffect, useRef, useState } from "react";
+import styles from "./NavBar.module.css";
+import Hamburguer from "@/assets/icons/Hamburguer";
+import Image from "next/image";
+import logo from "@/assets/images/logo_3.svg";
+import { AnimationNav } from "./AnimationNav";
+import Link from "next/link";
 
 const NavBar = () => {
-  const whatsappNumber = '5493518031826'
+  const whatsappNumber = "5493518031826";
   const message = encodeURIComponent(
-    'Hola, estoy interesado en los servicios de SymbioNet, como desarrollo web personalizado, consultoría IT y automatización de procesos. ¡Me gustaría recibir más información!'
-  )
+    "Hola, estoy interesado en los servicios de SymbioNet, como desarrollo web personalizado, consultoría IT y automatización de procesos. ¡Me gustaría recibir más información!"
+  );
 
-  const [showMenu, setShowMenu] = useState(false)
-  const containerRef = useRef(null)
-  const navRef = useRef(null)
-  const logoRef = useRef(null)
-  const homeRef = useRef(null)
-  const solutionsRef = useRef(null)
-  const companyRef = useRef(null)
-  const resourcesRef = useRef(null)
-  const contactUsRef = useRef(null)
-  const menuRef = useRef(null)
+  const [showMenu, setShowMenu] = useState(false);
+  const containerRef = useRef(null);
+  const navRef = useRef(null);
+  const logoRef = useRef(null);
+  const homeRef = useRef(null);
+  const solutionsRef = useRef(null);
+  const companyRef = useRef(null);
+  const resourcesRef = useRef(null);
+  const contactUsRef = useRef(null);
+  const menuRef = useRef(null);
 
   useEffect(() => {
     AnimationNav(
@@ -34,57 +34,57 @@ const NavBar = () => {
       resourcesRef.current,
       contactUsRef.current,
       menuRef.current
-    )
-  })
+    );
+  });
   return (
     <header className={styles.containerNav} ref={containerRef}>
-      <nav className={`${styles.nav} ${showMenu ? styles.show : ''}`}>
+      <nav className={`${styles.nav} ${showMenu ? styles.show : ""}`}>
         <div className={styles.logo} ref={logoRef}>
-          <Image src={logo} alt='Logo' width={200} height={200} />
+          <Image src={logo} alt="Logo" width={200} height={200} />
         </div>
         <div className={styles.menu}>
           <ul>
-            <Link passHref href={'/#home'} onClick={() => setShowMenu(false)}>
-              <li ref={homeRef}>Home</li>
+            <Link passHref href={"/#home"} onClick={() => setShowMenu(false)}>
+              <li ref={homeRef}>Inicio</li>
             </Link>
             <Link
               passHref
-              href={'/#solutions'}
+              href={"/#solutions"}
               onClick={() => setShowMenu(false)}
             >
-              <li ref={solutionsRef}>Solutions</li>
+              <li ref={solutionsRef}>Soluciones</li>
             </Link>
             <Link
               passHref
-              href={'/#tech-stack'}
+              href={"/#tech-stack"}
               onClick={() => setShowMenu(false)}
             >
-              <li ref={companyRef}>Tech Stack</li>
+              <li ref={companyRef}>Stack Tecnológico</li>
             </Link>
-            <Link passHref href={'/#about'} onClick={() => setShowMenu(false)}>
-              <li ref={resourcesRef}>About Us</li>
+            <Link passHref href={"/#about"} onClick={() => setShowMenu(false)}>
+              <li ref={resourcesRef}>Nosotros</li>
             </Link>
             <Link
               passHref
               href={`https://wa.me/${whatsappNumber}?text=${message}`}
-              target='_blank'
-              rel='noopener noreferrer'
+              target="_blank"
+              rel="noopener noreferrer"
               onClick={() => setShowMenu(false)}
             >
               <li ref={contactUsRef}>
-                <button className={styles.button_contact}>Contact Us</button>
+                <button className={styles.button_contact}>Contáctanos</button>
               </li>
             </Link>
           </ul>
         </div>
         <div className={styles.hamburguer} ref={menuRef}>
           <button onClick={() => setShowMenu(!showMenu)}>
-            <Hamburguer color='white' width='32px' height='32px' />
+            <Hamburguer color="white" width="32px" height="32px" />
           </button>
         </div>
       </nav>
     </header>
-  )
-}
+  );
+};
 
-export default NavBar
+export default NavBar;
