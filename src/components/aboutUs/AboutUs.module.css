@@ -180,6 +180,10 @@
     display: none;
   }
 
+  .caripelas {
+    overflow-y: hidden;
+  }
+
   .caripelas .cards {
     width: 100%;
   }

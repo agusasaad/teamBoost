@@ -20,7 +20,12 @@ const AboutUs = () => {
   const images = useRef([])
 
   useEffect(() => {
-    AnimateAboutUs(title.current, text.current, caripelas.current)
+    AnimateAboutUs(
+      subtitle.current,
+      title.current,
+      text.current,
+      caripelas.current
+    )
   }, [])
 
   return (
@@ -32,9 +37,8 @@ const AboutUs = () => {
         </span>
         <h2 ref={title}>Transformando ideas en soluciones efectivas</h2>
         <p ref={text}>
-          Con experiencia en el desarrollo de software web, agilizamos los
-          procesos manuales con automatizaciones que potencian a los equipos,
-          ofreciendo soluciones efectivas con un impacto duradero y sostenible.
+          Automatizamos procesos manuales para potenciar equipos, brindando
+          soluciones efectivas y sostenibles en el desarrollo de software web.
         </p>
       </div>
       <div className={styles.caripelas} ref={caripelas}>

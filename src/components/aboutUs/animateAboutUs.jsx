@@ -1,8 +1,31 @@
 import gsap from 'gsap'
 import { ScrollTrigger } from 'gsap/all'
 
-export const AnimateAboutUs = (title, text, caripelas) => {
+export const AnimateAboutUs = (subtitle, title, text, caripelas) => {
   gsap.registerPlugin(ScrollTrigger)
+
+  if (window.innerWidth < 650) {
+    return gsap.fromTo(
+      [subtitle, caripelas],
+      {
+        y: 200,
+        opacity: 0,
+      },
+      {
+        y: 0,
+        opacity: 1,
+        duration: 0.7,
+        ease: 'power1',
+        stagger: 0.1,
+        scrollTrigger: {
+          trigger: '#about',
+          start: 'top 70%',
+          end: 'bottom',
+        },
+      }
+    )
+  }
+
   if (title) {
     // Verifica si ya contiene spans
     if (!title.querySelector('span')) {
