@@ -16,7 +16,7 @@ const Solutions = () => {
   return (
     <div className={styles.container} ref={containerRef} id="solutions">
       <div className={styles.title} ref={title}>
-        <h2>Our Solutions</h2>
+        <h2>Nuestras Soluciones</h2>
       </div>
       <div className={styles.solutions}>
         {solutionsData.map((item, index) => (
@@ -26,11 +26,15 @@ const Solutions = () => {
             ref={(el) => (cards.current[index] = el)}
           >
             <span>{item.icon}</span>
-            <h3>{item.name}</h3>
-            <p>{item.text}</p>
+
+            <div>
+              <h3>{item.name}</h3>
+              <p>{item.text}</p>
+            </div>
+
             <div>
               <button>
-                Learn More <Arrow width="20px" height="20px" />
+                Para saber mas <Arrow width="20px" height="20px" />
               </button>
             </div>
           </div>
