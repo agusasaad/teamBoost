@@ -49,7 +49,7 @@ const Footer = () => {
       <div className={styles.container}>
         <div className={styles.info_text} ref={containerBannerRef}>
           <h2 ref={titleRef}>
-            Potencia tu negocio con soluciones innovadoras.
+            Potencia tu negocio con soluciones innovadoras
           </h2>
           <p ref={descripotionRef}>
             Impulsa tu negocio con soluciones innovadoras y fortalece las
@@ -62,7 +62,7 @@ const Footer = () => {
               target="_blank"
             >
               <button>
-                Programa tu consulta gratuita.
+                Programa tu consulta gratuita
                 <Arrow width="20px" height="20px" />
               </button>
             </Link>
@@ -80,7 +80,7 @@ const Footer = () => {
                   height={100}
                   style={{ width: "160px", height: "auto" }}
                 />
-                <p>Transforma tu negocio con SymbioNet.</p>
+                <p>Transforma tu negocio con SymbioNet</p>
               </div>
               <div className={styles.list_page} ref={navigationRef}>
                 <h5>Navegación</h5>
@@ -143,11 +143,11 @@ const Footer = () => {
             <div className={styles.line} ref={lineRef}></div>
             <div className={styles.copyright}>
               <p ref={textRef}>
-                © {new Date().getFullYear()}
-                SymbioNet. Todos los derechos reservados.
+                © {new Date().getFullYear()} SymbioNet. Todos los derechos
+                reservados.
               </p>
               <p ref={text_twoRef}>
-              Diseñado por <strong>SymbioNet.</strong>
+                Diseñado por <strong>SymbioNet.</strong>
               </p>
             </div>
           </div>

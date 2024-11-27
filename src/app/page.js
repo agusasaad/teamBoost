@@ -20,6 +20,7 @@ export default function Home() {
       </div>
       <div className={styles.sections}>
         <TechStack />
+        <AboutUs/>
         <Faq />
       </div>
     </main>

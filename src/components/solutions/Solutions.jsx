@@ -26,8 +26,12 @@ const Solutions = () => {
             ref={(el) => (cards.current[index] = el)}
           >
             <span>{item.icon}</span>
-            <h3>{item.name}</h3>
-            <p>{item.text}</p>
+
+            <div>
+              <h3>{item.name}</h3>
+              <p>{item.text}</p>
+            </div>
+
             <div>
               <button>
                 Para saber mas <Arrow width="20px" height="20px" />

@@ -109,7 +109,7 @@ const Faq = () => {
       </div>
       <div className={styles.final} ref={contact}>
         <p>
-          ¿Tienes más preguntas?{" "}
+          ¿Tienes más preguntas? {"  "}
           <Link
             href={`https://wa.me/${whatsappNumber}?text=${message}`}
             target="_blank"

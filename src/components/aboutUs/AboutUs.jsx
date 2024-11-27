@@ -27,10 +27,10 @@ const AboutUs = () => {
     <div className={styles.container} id="about">
       <div className={styles.info_text}>
         <span className={styles.subtitle} ref={subtitle}>
-          <span className={styles.circle}></span>Equipo{" "}
+          <span className={styles.circle}></span>Team{" "}
           <strong>SymbioNet.</strong>
         </span>
-        <h2 ref={title}>Transforming Ideas into Effective Solutions</h2>
+        <h2 ref={title}>Transformando ideas en soluciones efectivas</h2>
         <p ref={text}>
           Con experiencia en el desarrollo de software web, agilizamos los
           procesos manuales con automatizaciones que potencian a los equipos,
