@@ -11,7 +11,7 @@
 
 .info_text {
   width: 100%;
-  background-image: url('./../../assets/images/footer.png');
+  background-image: url('./../../assets/images/footer.webp');
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
@@ -110,9 +110,9 @@
   align-items: flex-start;
 }
 
-.list_page h5,
-.list_contact h5,
-.list_social h5 {
+.list_page h3,
+.list_contact h3,
+.list_social h3 {
   font-family: var(--inter);
   font-size: 16px;
   color: var(--white);
@@ -237,9 +237,9 @@
     width: 100%;
   }
 
-  .list_page h5,
-  .list_contact h5,
-  .list_social h5 {
+  .list_page h3,
+  .list_contact h3,
+  .list_social h3 {
     text-align: center;
     width: 100%;
   }
@@ -251,7 +251,7 @@
   .copyright {
     flex-direction: column;
     align-items: center;
-    gap: 10px;
+    gap: 20px;
   }
 }
 
@@ -260,7 +260,18 @@
     gap: 15px;
   }
 
+  .logo p {
+    max-width: 70%;
+    text-wrap: balance;
+    line-height: 30px;
+  }
+
   .info_text p {
     text-wrap: balance;
+  }
+
+  .copyright p {
+    text-align: center;
+    line-height: 30px;
   }
 }
