@@ -9,18 +9,19 @@ export default function Home() {
     <main className={styles.main}>
       <div className={styles.container_home}>
         <video
-          src='/video.mp4'
+          src='/video.webm'
           loop
           preload='auto'
           muted
           autoPlay
           playsInline
+          aria-label='video de fondo'
         ></video>
         <Header />
       </div>
       <div className={styles.sections}>
         <TechStack />
-        <AboutUs/>
+        <AboutUs />
         <Faq />
       </div>
     </main>
