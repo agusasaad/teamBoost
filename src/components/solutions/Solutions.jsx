@@ -5,7 +5,7 @@ import Arrow from '@/assets/icons/Arrow'
 import { useEffect, useRef } from 'react'
 import { AnimationSolutions } from './animationSolutions'
 
-const Solutions = () => {
+const Solutions = ({ openModal }) => {
   const containerRef = useRef(null)
   const title = useRef(null)
   const cards = useRef([])
@@ -33,7 +33,11 @@ const Solutions = () => {
             </div>
 
             <div>
-              <button type='button' title='Mas Informacion'>
+              <button
+                type='button'
+                title='Mas Informacion'
+                onClick={() => openModal()}
+              >
                 Para saber mas <Arrow width='20px' height='20px' />
               </button>
             </div>

@@ -5,7 +5,7 @@ import Solutions from '../solutions/Solutions'
 import { useEffect, useRef } from 'react'
 import { AnimateHeader } from './AnimateHeader'
 import Link from 'next/link'
-const Header = () => {
+const Header = ({ openModal }) => {
   const subtitleRef = useRef(null)
   const titleRef = useRef(null)
   const descriptionRef = useRef(null)
@@ -32,7 +32,7 @@ const Header = () => {
           Guiamos y Desarrollamos tu Transformación Digital
         </h1>
         <p ref={descriptionRef}>
-          Todo lo esencial para la tecnología de tu negocio,disponible en un
+          Todo lo esencial para la tecnología de tu negocio, disponible en un
           solo lugar.
         </p>
         <div className={styles.button_contact} ref={buttonRef}>
@@ -63,7 +63,7 @@ const Header = () => {
           </div>
         </div>
       </div>
-      <Solutions />
+      <Solutions openModal={openModal} />
     </div>
   )
 }
