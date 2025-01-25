@@ -117,10 +117,11 @@
   letter-spacing: 0px;
 }
 
+
 /* Media Queries */
-@media (max-width: 1300px) {
+@media (max-width: 1400px) {
   .total_content {
-    padding: 150px 0px;
+    padding: 100px 0px;
   }
 
   .title {

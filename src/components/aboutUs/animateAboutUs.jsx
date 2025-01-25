@@ -70,7 +70,7 @@ export const AnimateAboutUs = (subtitle, title, text, caripelas) => {
     [text, caripelas],
     {
       opacity: 0,
-      y: 200,
+      y: 100,
     },
     {
       opacity: 1,
