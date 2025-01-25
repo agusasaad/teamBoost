@@ -6,6 +6,7 @@ import Image from 'next/image'
 import logo from '@/assets/images/logo_3.svg'
 import { AnimationNav } from './AnimationNav'
 import Link from 'next/link'
+import Close from '@/assets/icons/Close'
 
 const NavBar = () => {
   const whatsappNumber = '5493518031826'
@@ -95,7 +96,8 @@ const NavBar = () => {
             onClick={() => setShowMenu(!showMenu)}
             aria-label='hamburguer'
           >
-            <Hamburguer color='white' width='32px' height='32px' />
+              <Hamburguer showMenu={showMenu} color='white' width='32px' height='32px' />
+          
           </button>
         </div>
       </nav>
