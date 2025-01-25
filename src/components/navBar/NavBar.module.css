@@ -98,7 +98,7 @@
     order: 3;
     width: 100%;
     max-width: 100%;
-    min-height: 90vh;
+    min-height: calc(100vh - 80px);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -107,7 +107,6 @@
   .menu ul {
     flex-direction: column;
     gap: 40px;
-    margin-top: 10px;
   }
   .menu ul a {
     width: 100%;
