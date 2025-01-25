@@ -80,6 +80,7 @@
     flex-wrap: wrap;
     max-height: 80px;
     overflow-y: hidden;
+    padding: 24px 15px;
     row-gap: 24px;
     border-bottom: 1px solid rgb(19, 19, 19);
     transition: max-height 1s ease, background-color 1s ease-in-out;

@@ -6,7 +6,6 @@ import Image from 'next/image'
 import logo from '@/assets/images/logo_3.svg'
 import { AnimationNav } from './AnimationNav'
 import Link from 'next/link'
-import Close from '@/assets/icons/Close'
 
 const NavBar = () => {
   const whatsappNumber = '5493518031826'
