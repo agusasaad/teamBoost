@@ -82,14 +82,14 @@
     overflow-y: hidden;
     row-gap: 24px;
     border-bottom: 1px solid rgb(19, 19, 19);
-    transition: max-height 2s ease, background-color 2s ease-in-out;
+    transition: max-height 1s ease, background-color 1s ease-in-out;
     background-color: #040309d8;
     backdrop-filter: blur(5px);
   }
 
   .nav.show {
     max-height: 800px;
-    transition: max-height 2s ease;
+    transition: max-height 1s ease;
     background-color: #040309d8;
     backdrop-filter: blur(5px);
   }
@@ -98,6 +98,10 @@
     order: 3;
     width: 100%;
     max-width: 100%;
+    min-height: 90vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
 
   .menu ul {
