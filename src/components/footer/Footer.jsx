@@ -120,23 +120,23 @@ const Footer = () => {
                 </ul>
               </div>
               <div className={styles.list_social} ref={socialMediaRef}>
-                <h3>Síguenos</h3>
+                <h3>Seguinos</h3>
                 <ul>
-                  <Link href={'/'} title='Facebook'>
+                  {/* <Link href={'/'} title='Facebook'>
                     <li>
                       <Facebook width='18px' height='18px' />
                     </li>
-                  </Link>
-                  <Link href={'/'} title='Linkedin'>
+                  </Link> */}
+                  <Link href={'https://www.linkedin.com/company/symbionetsolutions/'} title='Linkedin' target='_blank'>
                     <li>
                       <Linkedin width='18px' height='18px' />
                     </li>
                   </Link>
-                  <Link href={'/'} title='Instagram'>
+                  {/* <Link href={'/'} title='Instagram'>
                     <li>
                       <Instagram width='18px' height='18px' />
                     </li>
-                  </Link>
+                  </Link> */}
                 </ul>
               </div>
             </div>

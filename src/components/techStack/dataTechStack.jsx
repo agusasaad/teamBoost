@@ -21,7 +21,7 @@ export const techStackData = [
     icon: <BackEnd width='30px' height='30px' color='white' />,
   },
   {
-    title: 'infraestructura',
+    title: 'Infraestructura',
     description:
       'Agiliza tus operaciones con soluciones de automatización que reducen el trabajo manual y aumentan la eficiencia.',
     icon: <Infrastructure width='30px' height='30px' color='white' />,
