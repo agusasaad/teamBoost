@@ -64,6 +64,7 @@ const AboutUs = () => {
         {arr.map((item, index) => (
           <Link
             key={index}
+            ref={(el) => (images.current[index] = el)}
             className={styles.cards}
             href={item.link}
             target="_blank"

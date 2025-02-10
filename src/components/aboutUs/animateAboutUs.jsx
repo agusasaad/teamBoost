@@ -77,6 +77,8 @@ export const AnimateAboutUs = (subtitle, title, text, caripelas) => {
       y: 0,
       duration: 0.7,
       ease: "power1",
+      stagger: 0.1,
+      delay: 0.8,
       scrollTrigger: {
         trigger: "#about",
         start: "top 80%",
