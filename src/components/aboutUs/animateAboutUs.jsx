@@ -67,7 +67,7 @@ export const AnimateAboutUs = (subtitle, title, text, caripelas) => {
   );
 
   gsap.fromTo(
-    text,
+    [text, caripelas],
     {
       opacity: 0,
       y: 100,

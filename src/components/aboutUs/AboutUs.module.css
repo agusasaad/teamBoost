@@ -73,10 +73,8 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  flex-wrap: wrap;
-  row-gap: 100px;
+  row-gap: 300px;
   position: relative;
-  transition: transform 0.3s ease-in-out;
 }
 
 .caripelas .cards {
@@ -96,18 +94,18 @@
 }
 
 .caripelas .cards:nth-of-type(1) {
-  transform: rotateZ(-5deg);
-}
-.caripelas .cards:nth-of-type(2) {
   transform: rotateZ(0deg);
 }
-
-.caripelas .cards:nth-of-type(3) {
+.caripelas .cards:nth-of-type(2) {
   transform: rotateZ(5deg);
 }
 
-.caripelas .cards:nth-of-type(4) {
+.caripelas .cards:nth-of-type(3) {
   transform: rotateZ(10deg);
+}
+
+.caripelas .cards:nth-of-type(4) {
+  transform: rotateZ(15deg);
 }
 
 .info_caripela {
@@ -190,6 +188,29 @@
   .caripelas .cards {
     width: 100%;
     box-shadow: 0px 0px 40px -9px rgba(0, 0, 0, 0.75);
+    position: relative;
+    transform: none;
+    top: 0;
+  }
+
+  .caripelas .cards:nth-of-type(1) {
+    transform: rotateZ(0deg);
+  }
+  .caripelas .cards:nth-of-type(2) {
+    transform: rotateZ(0deg);
+  }
+
+  .caripelas .cards:nth-of-type(3) {
+    transform: rotateZ(0deg);
+  }
+
+  .caripelas .cards:nth-of-type(4) {
+    transform: rotateZ(0deg);
+  }
+
+  .info_caripela {
+    width: 100%;
+    height: 100%;
   }
 }
 
