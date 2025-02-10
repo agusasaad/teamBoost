@@ -5,6 +5,7 @@ import { AnimateAboutUs } from "./animateAboutUs";
 import caripela_1 from "@/assets/images/caripelas/caripela_1.webp";
 import caripela_2 from "@/assets/images/caripelas/cariplea_2.webp";
 import caripela_3 from "@/assets/images/caripelas/caripela_3.webp";
+import caripela_4 from "@/assets/images/caripelas/caripela_4.webp";
 import Image from "next/image";
 import Link from "next/link";
 
@@ -24,6 +25,11 @@ const AboutUs = () => {
       img: caripela_1,
       name: "Fernanda Romay",
       link: "https://www.linkedin.com/in/fernanda-romay-511bb31a3/",
+    },
+    {
+      img: caripela_4,
+      name: "Manuel Carballido",
+      link: "https://www.linkedin.com/in/mcarballido/",
     },
   ];
   const subtitle = useRef(null);
@@ -58,7 +64,7 @@ const AboutUs = () => {
         {arr.map((item, index) => (
           <Link
             key={index}
-            ref={(el) => (images.current[index] = el)}
+            // ref={(el) => (images.current[index] = el)}
             className={styles.cards}
             href={item.link}
             target="_blank"
