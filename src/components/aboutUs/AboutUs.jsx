@@ -75,3 +75,9 @@ const AboutUs = () => {
 };
 
 export default AboutUs;
+
+// <h2 ref={title}>Transformando ideas en soluciones efectivas</h2>
+// <p ref={text}>
+//   Automatizamos procesos manuales para potenciar equipos, brindando
+//   soluciones efectivas y sostenibles en el desarrollo de software web.
+// </p>
