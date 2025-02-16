@@ -16,6 +16,7 @@
   gap: 10px;
   width: 90%;
   max-width: 900px;
+  display: none;
 }
 
 .info_text .subtitle {
@@ -46,26 +47,6 @@
   font-weight: 600;
 }
 
-.info_text h2 {
-  font-family: var(--sora);
-  font-size: 60px;
-  color: white;
-  font-weight: 400;
-  letter-spacing: -0.04em;
-  line-height: 75px;
-  text-align: center;
-  text-wrap: balance;
-}
-
-.info_text p {
-  font-size: 20px;
-  color: rgb(209, 209, 209);
-  font-weight: 400;
-  line-height: 1.7em;
-  text-align: center;
-  text-wrap: balance;
-}
-
 .caripelas {
   width: 100%;
   max-width: 1200px;
@@ -73,8 +54,27 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  row-gap: 300px;
+  row-gap: 250px;
   position: relative;
+}
+
+.title {
+  width: 100%;
+  min-height: 400px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: sticky;
+  top: 230px;
+}
+
+.title h2 {
+  font-size: 80px;
+  font-family: var(--sora);
+  color: white;
+  font-weight: 400;
+  letter-spacing: -0.06em;
+  line-height: 75px;
 }
 
 .caripelas .cards {
@@ -86,7 +86,7 @@
   gap: 25px;
   will-change: transform, opacity;
   position: sticky;
-  top: 150px;
+  top: 230px;
   border-radius: 30px;
   overflow: hidden;
   cursor: pointer;
@@ -94,42 +94,37 @@
 }
 
 .caripelas .cards:nth-of-type(1) {
-  transform: rotateZ(0deg);
+  transform: rotateZ(-10deg);
 }
 .caripelas .cards:nth-of-type(2) {
-  transform: rotateZ(5deg);
+  transform: rotateZ(-5deg);
 }
 
 .caripelas .cards:nth-of-type(3) {
-  transform: rotateZ(10deg);
+  transform: rotateZ(0deg);
 }
 
 .caripelas .cards:nth-of-type(4) {
-  transform: rotateZ(15deg);
+  transform: rotateZ(5deg);
 }
 
 .info_caripela {
   background: linear-gradient(
     0deg,
     rgba(11, 11, 11, 1) 0%,
-    rgba(11, 11, 11, 0) 100%
+    rgba(0, 0, 0, 0) 100%
   );
+
   position: absolute;
-  bottom: -1;
+  bottom: 0;
   left: 0;
-  width: 120%;
-  height: 120%;
+  width: 100%;
+  height: 100%;
   border-radius: 20px;
   display: flex;
   align-items: flex-end;
   justify-content: flex-start;
   padding: 30px;
-  opacity: 0;
-  transition: opacity 0.7s ease-in-out;
-}
-
-.info_caripela:hover {
-  opacity: 1;
 }
 
 .cards span {
@@ -147,19 +142,16 @@
   object-fit: cover;
 }
 
-@media (max-width: 1200px) {
+@media (max-width: 1300px) {
+  .caripelas {
+    row-gap: 300px;
+  }
+  .title {
+    top: 180px;
+  }
+
   .caripelas .cards {
-    width: 30%;
-  }
-
-  .caripelas .cards img {
-    border-radius: 20px;
-
-    object-fit: fill;
-  }
-
-  .info_text h2 {
-    font-size: 55px;
+    top: 180px;
   }
 }
 
@@ -169,16 +161,19 @@
     padding-bottom: 80px;
   }
 
+  .info_text {
+    display: flex;
+  }
+
+  .title {
+    display: none;
+  }
+
   .subtitle strong {
     font-family: var(--inter);
     font-weight: 400;
   }
 
-  .info_text p {
-    font-size: 18px;
-    text-wrap: balance;
-    text-align: center;
-  }
   .caripelas {
     flex-direction: column-reverse;
     align-items: center;

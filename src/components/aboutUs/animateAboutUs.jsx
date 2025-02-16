@@ -1,7 +1,7 @@
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/all";
 
-export const AnimateAboutUs = (subtitle, title, text, caripelas) => {
+export const AnimateAboutUs = (title, subtitle, caripelas) => {
   gsap.registerPlugin(ScrollTrigger);
 
   if (window.innerWidth < 650) {
@@ -27,16 +27,19 @@ export const AnimateAboutUs = (subtitle, title, text, caripelas) => {
   }
 
   if (title) {
-    // Verifica si ya contiene spans
     if (!title.querySelector("span")) {
-      const words = title.textContent.split(" ");
+      const letters = title.textContent.split("");
       title.innerHTML = "";
 
-      words.forEach((word) => {
+      letters.forEach((letter, index) => {
         const span = document.createElement("span");
-        span.textContent = word;
+        span.textContent = letter;
         span.style.display = "inline-block";
-        span.style.marginRight = window.innerWidth < 1024 ? "10px" : "15px";
+
+        if (index === 3) {
+          span.style.marginRight = "20px";
+        }
+
         title.appendChild(span);
       });
     }
@@ -44,46 +47,27 @@ export const AnimateAboutUs = (subtitle, title, text, caripelas) => {
 
   const spans = title.querySelectorAll("span");
 
-  gsap.fromTo(
-    spans,
-    {
-      y: 5,
-      opacity: 0,
-      filter: "blur(10px)",
-    },
-    {
-      y: 0,
-      opacity: 1,
-      filter: "blur(0px)",
-      duration: 1,
-      stagger: 0.1,
-      ease: "power1",
-      scrollTrigger: {
-        trigger: "#about",
-        start: "top 80%",
-        end: "bottom",
+  spans.forEach((span, index) => {
+    gsap.fromTo(
+      span,
+      {
+        y: 10,
+        opacity: 0,
+        filter: "blur(10px)",
       },
-    }
-  );
-
-  gsap.fromTo(
-    [text, caripelas],
-    {
-      opacity: 0,
-      y: 100,
-    },
-    {
-      opacity: 1,
-      y: 0,
-      duration: 0.7,
-      ease: "power1",
-      stagger: 0.1,
-      delay: 0.8,
-      scrollTrigger: {
-        trigger: "#about",
-        start: "top 80%",
-        end: "bottom",
-      },
-    }
-  );
+      {
+        y: 0,
+        opacity: 1,
+        filter: "blur(0px)",
+        duration: 1,
+        ease: "power3.inOut",
+        delay: index * 0.05,
+        scrollTrigger: {
+          trigger: "#about",
+          start: "top 80%",
+          end: "bottom",
+        },
+      }
+    );
+  });
 };

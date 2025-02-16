@@ -1,5 +1,5 @@
 "use client";
-import { useEffect, useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 import styles from "./AboutUs.module.css";
 import { AnimateAboutUs } from "./animateAboutUs";
 import caripela_1 from "@/assets/images/caripelas/caripela_1.webp";
@@ -34,17 +34,10 @@ const AboutUs = () => {
   ];
   const subtitle = useRef(null);
   const title = useRef(null);
-  const text = useRef(null);
   const caripelas = useRef(null);
-  const images = useRef([]);
 
   useEffect(() => {
-    AnimateAboutUs(
-      subtitle.current,
-      title.current,
-      text.current,
-      caripelas.current
-    );
+    AnimateAboutUs(title.current, subtitle.current, caripelas.current);
   }, []);
 
   return (
@@ -54,19 +47,16 @@ const AboutUs = () => {
           <span className={styles.circle}></span>Team{" "}
           <strong>SymbioNet.</strong>
         </span>
-        <h2 ref={title}>Transformando ideas en soluciones efectivas</h2>
-        <p ref={text}>
-          Automatizamos procesos manuales para potenciar equipos, brindando
-          soluciones efectivas y sostenibles en el desarrollo de software web.
-        </p>
       </div>
       <div className={styles.caripelas} ref={caripelas}>
+        <div className={styles.title}>
+          <h2 ref={title}>Team SymbioNet.</h2>
+        </div>
         {arr.map((item, index) => (
           <Link
-            key={index}
-            ref={(el) => (images.current[index] = el)}
-            className={styles.cards}
             href={item.link}
+            key={index}
+            className={styles.cards}
             target="_blank"
           >
             <Image
@@ -77,9 +67,6 @@ const AboutUs = () => {
               loading="lazy"
               quality={90}
             />
-            <div className={styles.info_caripela}>
-              <span>{item.name}</span>
-            </div>
           </Link>
         ))}
       </div>
