@@ -39,7 +39,7 @@ const Contacto = () => {
           </button>
         </Link>
         <Link
-          href={'mailto:somos@symbionet.tech'}
+          href={'mailto:contacto@symbionet.tech'}
           target='_blank'
           title='Programa tu Consulta por Gmail'
         >
