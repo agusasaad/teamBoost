@@ -122,10 +122,9 @@
   }
 
   .titles .ranking {
-    margin-top: 50px;
+    margin-top: 40px;
   }
 }
-
 
 @media (max-width: 850px) {
   .container {
