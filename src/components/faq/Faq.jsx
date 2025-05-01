@@ -8,7 +8,7 @@ import { animateFAQ } from './animateFaq'
 import Link from 'next/link'
 
 const Faq = () => {
-  const whatsappNumber = '5493518031826'
+  const whatsappNumber = '5493518001877'
   const message = encodeURIComponent(
     'Hola, tengo algunas preguntas adicionales después de leer las preguntas frecuentes. ¿Podrían ayudarme con más detalles sobre sus servicios?'
   )

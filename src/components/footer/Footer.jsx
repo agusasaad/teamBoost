@@ -102,12 +102,12 @@ const Footer = () => {
                 <h3>Contacto</h3>
                 <ul>
                   <Link
-                    href={'https://wa.me/5493518031826'}
-                    title='+54 9 3518031826'
+                    href={'https://wa.me/5493518001877'}
+                    title='+54 9 351 800 1877'
                     target='_blank'
                   >
                     <li>
-                      <Phone width='18px' height='18px' /> +54 9 3518031826
+                      <Phone width='18px' height='18px' /> +54 9 351 800 1877
                     </li>
                   </Link>
                   <Link

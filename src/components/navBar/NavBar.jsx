@@ -8,7 +8,7 @@ import { AnimationNav } from './AnimationNav'
 import Link from 'next/link'
 
 const NavBar = () => {
-  const whatsappNumber = '5493518031826'
+  const whatsappNumber = '5493518001877'
   const message = encodeURIComponent(
     'Hola, estoy interesado en los servicios de SymbioNet, como desarrollo web personalizado, consultoría IT y automatización de procesos. ¡Me gustaría recibir más información!'
   )

@@ -16,7 +16,7 @@ const Contacto = () => {
       </div>
       <div className={styles.container_button}>
         <Link
-          href={'https://wa.me/5493518031826'}
+          href={'https://wa.me/5493518001877'}
           target='_blank'
           title='Programa tu Consulta de whatsapp'
         >
