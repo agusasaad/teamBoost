@@ -7,9 +7,9 @@ import MdOutlineRoute from '@/assets/icons/MdOutlineRoute'
 import BsDiagram3 from '@/assets/icons/BsDiagram3'
 import AiOutlineRobot from '@/assets/icons/AiOutlineRobot'
 import ChangeCircle from '@/assets/icons/ChangeCircle'
-import Factory from '@/assets/icons/Factory'
-import GiHealthNormal from '@/assets/icons/GiHealthNormal'
-import ConveyorBelt from '@/assets/icons/ConveyorBelt'
+// import Factory from '@/assets/icons/Factory'
+// import GiHealthNormal from '@/assets/icons/GiHealthNormal'
+// import ConveyorBelt from '@/assets/icons/ConveyorBelt'
 
 const AlianzasRoutes = () => {
   const subtitleRef = useRef(null)
@@ -47,25 +47,25 @@ const AlianzasRoutes = () => {
     },
   ]
 
-  const aplicacionesIndustrialesData = [
-    {
-      name: 'Manufactura y bienes de consumo',
-      text: 'Transformar la producción y las experiencias del consumidor',
-      icon: <Factory width='24px' height='24px' color='white' />,
-    },
+  // const aplicacionesIndustrialesData = [
+  //   {
+  //     name: 'Manufactura y bienes de consumo',
+  //     text: 'Transformar la producción y las experiencias del consumidor',
+  //     icon: <Factory width='24px' height='24px' color='white' />,
+  //   },
 
-    {
-      name: 'Salud y ciencias de la vida',
-      text: 'Innovar en la atención al paciente y las capacidades de investigación',
-      icon: <GiHealthNormal width='24px' height='24px' color='white' />,
-    },
+  //   {
+  //     name: 'Salud y ciencias de la vida',
+  //     text: 'Innovar en la atención al paciente y las capacidades de investigación',
+  //     icon: <GiHealthNormal width='24px' height='24px' color='white' />,
+  //   },
 
-    {
-      name: 'Logística y venta minorista',
-      text: 'Optimizar las cadenas de suministro y los recorridos de los clientes',
-      icon: <ConveyorBelt width='24px' height='24px' color='white' />,
-    },
-  ]
+  //   {
+  //     name: 'Logística y venta minorista',
+  //     text: 'Optimizar las cadenas de suministro y los recorridos de los clientes',
+  //     icon: <ConveyorBelt width='24px' height='24px' color='white' />,
+  //   },
+  // ]
 
   return (
     <div className={styles.container_home}>
