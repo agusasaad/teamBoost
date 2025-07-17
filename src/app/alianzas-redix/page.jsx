@@ -92,10 +92,10 @@ const AlianzasRoutes = () => {
             solutionsData={beneficiosClaveData}
           />
 
-          <SectionCards
+          {/* <SectionCards
             mainTitle={'Aplicaciones industriales'}
             solutionsData={aplicacionesIndustrialesData}
-          />
+          /> */}
         </div>
       </div>
     </div>
