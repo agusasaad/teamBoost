@@ -31,6 +31,7 @@ const Footer = () => {
   const pathname = usePathname()
 
   useEffect(() => {
+    if (pathname === '/alianzas-redix') return
     AnimateFooter(
       containerBannerRef.current,
       titleRef.current,
@@ -45,7 +46,7 @@ const Footer = () => {
       textRef.current,
       text_twoRef.current
     )
-  }, [])
+  }, [pathname])
 
   useEffect(() => {}, [pathname])
 
