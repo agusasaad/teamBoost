@@ -32,8 +32,8 @@ const Header = ({ openModal }) => {
           Guiamos y Desarrollamos tu Transformación Digital
         </h1>
         <p ref={descriptionRef}>
-          Todo lo esencial para la tecnología de tu negocio, disponible en un
-          solo lugar.
+          Diseñamos soluciones a medida para impulsar la eficiencia operativa y
+          tus procesos a traves de la IA.
         </p>
         <div className={styles.button_contact} ref={buttonRef}>
           <Link

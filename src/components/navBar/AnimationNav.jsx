@@ -8,6 +8,7 @@ export const AnimationNav = (
   solutionsRef,
   companyRef,
   resourcesRef,
+  alianzas,
   contactUsRef,
   menuRef
 ) => {
@@ -19,6 +20,7 @@ export const AnimationNav = (
       solutionsRef,
       companyRef,
       resourcesRef,
+      alianzas,
       contactUsRef,
       menuRef,
     ],

@@ -12,6 +12,7 @@ import Location from '@/assets/icons/Location'
 import Arrow from '@/assets/icons/Arrow'
 import { useEffect, useRef } from 'react'
 import { AnimateFooter } from './animateFooter'
+import { usePathname } from 'next/navigation'
 
 const Footer = () => {
   const containerBannerRef = useRef(null)
@@ -26,6 +27,8 @@ const Footer = () => {
   const lineRef = useRef(null)
   const textRef = useRef(null)
   const text_twoRef = useRef(null)
+
+  const pathname = usePathname()
 
   useEffect(() => {
     AnimateFooter(
@@ -44,29 +47,38 @@ const Footer = () => {
     )
   }, [])
 
+  useEffect(() => {}, [pathname])
+
   return (
     <footer className={styles.container_footer}>
       <div className={styles.container}>
-        <div className={styles.info_text} ref={containerBannerRef}>
-          <h2 ref={titleRef}>Transformando ideas en soluciones efectivas</h2>
-          <p ref={descripotionRef}>
-            Automatizamos procesos manuales para potenciar equipos, brindando
-            soluciones efectivas y sostenibles en el desarrollo de software web.
-          </p>
-          <div className={styles.button_contact} ref={buttonRef}>
-            <Link
-              passHref
-              href={'https://calendly.com/fecotechsolutions/30min'}
-              target='_blank'
-              title='Programa tu consulta gratuita'
-            >
-              <button>
-                Programa tu consulta gratuita
-                <Arrow width='20px' height='20px' />
-              </button>
-            </Link>
+        {
+          <div className={styles.info_text} ref={containerBannerRef}>
+            <h2 ref={titleRef}>
+              {pathname === '/alianzas-redix'
+                ? '¿Está listo para transformar su organización?'
+                : 'Transformando ideas en soluciones efectivas'}
+            </h2>
+            <p ref={descripotionRef}>
+              {pathname === '/alianzas-redix'
+                ? 'Descubra cómo nuestra alianza estratégica puede impulsar la innovación y el crecimiento en su industria.'
+                : 'Automatizamos procesos manuales para potenciar equipos, brindando soluciones efectivas y sostenibles en el desarrollo de software web.'}
+            </p>
+            <div className={styles.button_contact} ref={buttonRef}>
+              <Link
+                passHref
+                href={'https://calendly.com/fecotechsolutions/30min'}
+                target='_blank'
+                title='Programa tu consulta gratuita'
+              >
+                <button>
+                  Programa tu consulta gratuita
+                  <Arrow width='20px' height='20px' />
+                </button>
+              </Link>
+            </div>
           </div>
-        </div>
+        }
         <div className={styles.line}></div>
         <div className={styles.footer_cotainer} ref={containerFooterRef}>
           <div className={styles.all_content}>
@@ -95,6 +107,9 @@ const Footer = () => {
                   </Link>
                   <Link href={'/#contact-us'} title='Nosotros'>
                     <li>Nosotros</li>
+                  </Link>
+                  <Link href={'/alianzas-redix'} title='Alianzas'>
+                    <li>Alianzas</li>
                   </Link>
                 </ul>
               </div>

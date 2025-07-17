@@ -21,6 +21,7 @@ const NavBar = () => {
   const solutionsRef = useRef(null)
   const companyRef = useRef(null)
   const resourcesRef = useRef(null)
+  const alianzas = useRef(null)
   const contactUsRef = useRef(null)
   const menuRef = useRef(null)
 
@@ -32,6 +33,7 @@ const NavBar = () => {
       solutionsRef.current,
       companyRef.current,
       resourcesRef.current,
+      alianzas.current,
       contactUsRef.current,
       menuRef.current
     )
@@ -78,6 +80,14 @@ const NavBar = () => {
             </Link>
             <Link
               passHref
+              href={'/alianzas-redix'}
+              onClick={() => setShowMenu(false)}
+              title='Alianzas'
+            >
+              <li ref={alianzas}>Alianzas</li>
+            </Link>
+            <Link
+              passHref
               href={`https://wa.me/${whatsappNumber}?text=${message}`}
               target='_blank'
               rel='noopener noreferrer'
@@ -95,8 +105,12 @@ const NavBar = () => {
             onClick={() => setShowMenu(!showMenu)}
             aria-label='hamburguer'
           >
-              <Hamburguer showMenu={showMenu} color='white' width='32px' height='32px' />
-          
+            <Hamburguer
+              showMenu={showMenu}
+              color='white'
+              width='32px'
+              height='32px'
+            />
           </button>
         </div>
       </nav>

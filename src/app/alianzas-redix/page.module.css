@@ -1,0 +1,200 @@
+.container_home {
+  width: 100%;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.container_home .background {
+  background-image: url('./../../assets/images/footer.webp');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  width: 100%;
+  height: 50%;
+  mask-image: linear-gradient(to bottom, black, transparent);
+}
+
+.container {
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.titles {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  height: auto;
+  overflow: hidden;
+  padding: 200px 0px 200px 0px;
+}
+
+.titles .subtitle {
+  color: white;
+  font-weight: 400;
+  font-size: 16px;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  background: #86868634;
+  padding: 7px 20px;
+  border-radius: 30px;
+  backdrop-filter: blur(10px);
+  display: flex;
+  align-items: center;
+  gap: 7px;
+}
+
+.circle {
+  width: 8px;
+  height: 8px;
+  background: #10b981;
+  border-radius: 50%;
+}
+
+.titles h1 {
+  font-family: var(--sora);
+  font-size: 70px;
+  color: var(--title);
+  font-weight: 400;
+  letter-spacing: -0.04em;
+  max-width: 1000px;
+  text-wrap: balance;
+  text-align: center;
+}
+
+.titles p {
+  font-size: 18px;
+  color: var(--text);
+  font-weight: 400;
+  max-width: 700px;
+  text-align: center;
+  line-height: 1.7em;
+}
+
+.button_contact {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin-top: 15px;
+}
+
+.titles .button_contact button {
+  border: none;
+  background-color: #5e60f7;
+  font-family: var(--inter);
+  color: var(--white);
+  font-size: 18px;
+  font-weight: 600;
+  padding: 16px 20px;
+  border-radius: 15px;
+  letter-spacing: 0.2px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.titles .ranking {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  max-width: 800px;
+  justify-content: space-evenly;
+  margin-top: 70px;
+}
+
+.titles .ranking div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.titles .ranking div span {
+  font-size: 25px;
+  font-family: var(--sora);
+  font-weight: 600;
+  color: white;
+  letter-spacing: -1px;
+}
+
+.alianza_container {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  padding-top: 20px;
+  padding-bottom: 120px;
+  gap: 120px;
+}
+
+@media (max-width: 1440px) {
+  .titles {
+    padding: 200px 0px 100px 0px;
+    width: 90%;
+  }
+
+  .container {
+    width: 100%;
+  }
+
+  .titles h1 {
+    font-size: 60px;
+  }
+
+  .titles .ranking {
+    margin-top: 40px;
+  }
+}
+
+@media (max-width: 850px) {
+  .container {
+    background-size: cover;
+  }
+
+  .titles {
+    min-height: auto;
+    padding: 150px 0px 50px 0px;
+  }
+
+  .titles h1 {
+    font-size: 50px;
+    line-height: 65px;
+  }
+  .titles .ranking {
+    display: none;
+  }
+}
+@media (max-width: 650px) {
+  .titles h1 {
+    font-size: 50px;
+    line-height: 65px;
+  }
+}
+
+@media (max-width: 470px) {
+  .alianza_container {
+    padding-bottom: 50px;
+    gap: 50px;
+  }
+  .titles {
+    gap: 15px;
+  }
+
+  .titles h1 {
+    font-size: 40px;
+    line-height: 55px;
+  }
+
+  .titles p {
+    text-wrap: balance;
+  }
+}
