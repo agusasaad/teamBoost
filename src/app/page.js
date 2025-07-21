@@ -8,6 +8,9 @@ import Modal from '@/components/modal/Modal'
 import { useState } from 'react'
 import Solutions from '@/components/solutions/Solutions'
 import Contacto from '@/components/contacto/Contacto'
+import SeccionAlianzas from '@/components/alinazas/seccionAlianzas/SeccionAlianzas'
+import Carrucel from '@/components/carrucel/Carrucel'
+import Clientes from '@/components/clientes/Clientes'
 
 export default function Home() {
   const [isModalOpen, setIsModalOpen] = useState(false)
@@ -29,7 +32,9 @@ export default function Home() {
       </div>
       <div className={styles.sections}>
         <TechStack />
+        <SeccionAlianzas />
         <AboutUs />
+        <Clientes />
         <Faq />
       </div>
       <Modal isModalOpen={isModalOpen} onClose={closeModal}>

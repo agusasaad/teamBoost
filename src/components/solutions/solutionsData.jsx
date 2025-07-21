@@ -1,23 +1,23 @@
-import BackEnd from '@/assets/icons/BackEnd'
-import Gears from '@/assets/icons/Gears'
-import UxUi from '@/assets/icons/UxUi'
+import FaCogs from '@/assets/icons/FaCogs'
+import FaLaptopCode from '@/assets/icons/FaLaptopCode'
+import FaRobot from '@/assets/icons/FaRobot'
 
 export const solutionsData = [
   {
     name: 'IA y Automatización de Procesos',
-    text: 'Optimiza tus operaciones con soluciones de automatización que reducen el trabajo manual y aumentan la eficiencia.',
-    icon: <UxUi width='24px' height='24px' color='white' />,
+    text: 'Optimiza tus operaciones con soluciones basadas en inteligencia artificial que automatizan tareas repetitivas, reducen el trabajo manual y maximizan la eficiencia operativa.',
+    icon: <FaRobot color='white' />, // Representa IA y automatización
   },
 
   {
-    name: 'Consultoría tecnológica',
-    text: 'Orientación experta para optimizar tu infraestructura y estrategia de TI, asegurando la alineación con los objetivos de tu negocio.',
-    icon: <Gears width='24px' height='24px' color='white' />,
+    name: 'Consultoría Tecnológica y de IA',
+    text: 'Asesoría experta para alinear tu tecnología y estrategias digitales con los objetivos de negocio, integrando IA y conectando plataformas como ERPs, CRMs y APIs para impulsar la innovación y la competitividad.',
+    icon: <FaCogs color='white' />, // Representa engranajes y conexión de sistemas
   },
 
   {
-    name: 'Desarrollo de software a medida',
-    text: 'Soluciones de desarrollo web a medida para crear sitios web receptivos y de alto rendimiento que atraigan y conviertan a tu audiencia.',
-    icon: <BackEnd width='24px' height='24px' color='white' />,
+    name: 'Desarrollo de Software a Medida con IA',
+    text: 'Creamos soluciones web y aplicaciones personalizadas que incorporan IA para mejorar la experiencia del usuario, optimizar procesos y aumentar la conversión de tu audiencia.',
+    icon: <FaLaptopCode color='white' />, // Representa desarrollo de software personalizado
   },
 ]

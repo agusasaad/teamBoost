@@ -92,11 +92,10 @@ const TechStack = () => {
     >
       <div className={styles.total_content} ref={container}>
         <div className={styles.title} ref={title}>
-          <h2>Stack Tecnológico</h2>
+          <h2>Industrias</h2>
           <p>
-            Nuestro conjunto de herramientas de desarrollo de software se
-            actualiza constantemente para garantizar calidad, innovación y
-            excelencia.
+            Transformamos sectores estratégicos con tecnología e IA aplicada a
+            procesos reales
           </p>
         </div>
         <div className={styles.card_container} ref={card_container}>

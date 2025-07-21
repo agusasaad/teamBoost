@@ -5,6 +5,7 @@ import Solutions from '../solutions/Solutions'
 import { useEffect, useRef } from 'react'
 import { AnimateHeader } from './AnimateHeader'
 import Link from 'next/link'
+import Carrucel from '../carrucel/Carrucel'
 const Header = ({ openModal }) => {
   const subtitleRef = useRef(null)
   const titleRef = useRef(null)
@@ -29,11 +30,11 @@ const Header = ({ openModal }) => {
           Soluciones Tecnológicas
         </span>
         <h1 ref={titleRef}>
-          Guiamos y Desarrollamos tu Transformación Digital
+          Reinventamos tu organización a través de tecnología
         </h1>
         <p ref={descriptionRef}>
           Diseñamos soluciones a medida para impulsar la eficiencia operativa y
-          tus procesos a traves de la IA.
+          tus procesos a través de la IA
         </p>
         <div className={styles.button_contact} ref={buttonRef}>
           <Link
@@ -63,6 +64,7 @@ const Header = ({ openModal }) => {
           </div>
         </div>
       </div>
+      <Carrucel />
       <Solutions openModal={openModal} />
     </div>
   )

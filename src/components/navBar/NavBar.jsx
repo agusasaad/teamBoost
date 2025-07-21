@@ -80,7 +80,7 @@ const NavBar = () => {
             </Link>
             <Link
               passHref
-              href={'/alianzas-redix'}
+              href={'/#alianza'}
               onClick={() => setShowMenu(false)}
               title='Alianzas'
             >

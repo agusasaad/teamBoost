@@ -1,0 +1,128 @@
+.container {
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 40px;
+  min-height: 100vh;
+}
+.container h2 {
+  font-family: var(--sora);
+  font-size: 60px;
+  color: var(--title);
+  font-weight: 400;
+  letter-spacing: -0.04em;
+  max-width: 1000px;
+  text-wrap: balance;
+  text-align: center;
+  will-change: transform, opacity;
+}
+
+.container_cards {
+  display: flex;
+  flex-direction: row;
+  align-items: stretch;
+  color: white;
+  gap: 20px;
+  padding: 0px 20px;
+}
+
+.card {
+  width: 100%;
+  max-width: 500px;
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  background-color: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 20px;
+}
+
+.card .header {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 10px;
+}
+
+.card .header img {
+  width: 55px;
+  height: 55px;
+  border-radius: 9999px;
+  object-fit: cover;
+  object-position: center;
+  border: 3px solid var(--button);
+  padding: 3px;
+}
+
+.card .header .text {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.card .header .text h3 {
+  font-size: 16px;
+  font-family: var(--sora);
+  font-weight: 500;
+}
+
+.card .header .text h3 {
+  font-size: 16px;
+  font-family: var(--sora);
+}
+
+.card .header .text strong {
+  opacity: 0.6;
+  font-size: 14px;
+  font-family: var(--inter);
+  font-weight: 400;
+}
+
+.card .header .text span {
+  font-weight: 300;
+}
+
+.card .body p {
+  color: var(--text);
+  font-weight: 400;
+  line-height: 1.6em;
+  font-size: 16px;
+  letter-spacing: 0px;
+}
+
+@media (max-width: 1000px) {
+  .container h2 {
+    font-size: 55px;
+  }
+  .container_cards {
+    overflow: scroll;
+    width: 100%;
+    max-width: 100%;
+    scrollbar-width: none;
+  }
+
+  .card {
+    min-width: 300px;
+    min-height: 350px;
+  }
+}
+
+@media (max-width: 650px) {
+  .container {
+    min-height: 100%;
+    padding-bottom: 80px;
+  }
+  .container h2 {
+    font-size: 50px;
+  }
+}
+
+@media (max-width: 470px) {
+  .container h2 {
+    font-size: 35px;
+  }
+}

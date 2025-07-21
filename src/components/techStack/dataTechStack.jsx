@@ -1,59 +1,31 @@
-import BackEnd from '@/assets/icons/BackEnd'
-import Crm from '@/assets/icons/Crm'
-import FrontEnd from '@/assets/icons/FrontEnd'
+import FaChartLine from '@/assets/icons/FaChartLine'
+import FaHeartbeat from '@/assets/icons/FaHeartbeat'
+import FaIndustry from '@/assets/icons/FaIndustry'
 import Gears from '@/assets/icons/Gears'
-import Infrastructure from '@/assets/icons/Infrastructure'
-import MagnifyingGlass from '@/assets/icons/MagnifyingGlass'
-import Storage from '@/assets/icons/Storage'
-import UxUi from '@/assets/icons/UxUi'
 
 export const techStackData = [
   {
-    title: 'Desarrollo Frontend',
+    title: 'Supply Chain',
     description:
-      'Soluciones de desarrollo web a medida para crear sitios web responsivos y de alto rendimiento que atraigan y conviertan a tu audiencia.',
-    icon: <FrontEnd width='30px' height='30px' color='white' />,
+      'Colaboramos en la digitalización de procesos logísticos, desde la planificación hasta la ejecución en campo.',
+    icon: <Gears color='white' />,
   },
   {
-    title: 'Desarrollo Backend',
+    title: 'Healthcare & Life Sciences',
     description:
-      'Orientación experta para optimizar tu infraestructura y estrategia de TI, asegurando su alineación con los objetivos de tu negocio.',
-    icon: <BackEnd width='30px' height='30px' color='white' />,
+      'Acompañamos a organizaciones del sector salud en su transformación digital, optimizando procesos clave y gestión de datos.',
+    icon: <FaHeartbeat color='white' />,
   },
   {
-    title: 'Infraestructura',
+    title: 'Finance',
     description:
-      'Agiliza tus operaciones con soluciones de automatización que reducen el trabajo manual y aumentan la eficiencia.',
-    icon: <Infrastructure width='30px' height='30px' color='white' />,
+      'Desarrollamos soluciones tecnológicas adaptadas a los desafíos del sector financiero, mejorando control y eficiencia.',
+    icon: <FaChartLine color='white' />,
   },
   {
-    title: 'Almacenamiento',
+    title: 'Consumer Goods & Manufacturing',
     description:
-      'Soluciones avanzadas para gestionar y proteger tus datos de manera eficiente, garantizando accesibilidad y seguridad a largo plazo.',
-    icon: <Storage width='30px' height='30px' color='white' />,
-  },
-  {
-    title: 'CRM',
-    description:
-      'Soluciones para gestionar y optimizar las relaciones con tus clientes, centralizando la información y mejorando la comunicación.',
-    icon: <Crm width='30px' height='30px' color='white' />,
-  },
-  {
-    title: 'Tecnologías de Automatización e Integración',
-    description:
-      'Agiliza tus operaciones con soluciones de automatización que reducen el trabajo manual y aumentan la eficiencia.',
-    icon: <Gears width='30px' height='30px' color='white' />,
-  },
-  {
-    title: 'Análisis y Diseño de Productos',
-    description:
-      'Comprendemos y transformamos las necesidades de nuestros clientes en soluciones tecnológicas innovadoras.',
-    icon: <MagnifyingGlass width='30px' height='30px' color='white' />,
-  },
-  {
-    title: 'Investigación y Análisis UX/UI',
-    description:
-      'Diseño de interfaces intuitivas, fáciles de usar y visualmente atractivas, asegurando un producto funcional y optimizado.',
-    icon: <UxUi width='30px' height='30px' color='white' />,
+      'Impulsamos la eficiencia operativa con tecnología a medida para cada etapa de la producción y distribución.',
+    icon: <FaIndustry color='white' />,
   },
 ]
