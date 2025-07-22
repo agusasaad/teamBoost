@@ -14,6 +14,7 @@ import logo_symbio from '@/assets/images/icon.svg'
 import logo_redix from '@/assets/images/logo-redix.svg'
 import Manos from '@/assets/icons/Manos'
 import ArrowCard from '@/assets/icons/ArrowCard'
+import Link from 'next/link'
 
 const AlianzasRoutes = () => {
   const aplicacionesIndustrialesData = [
@@ -116,7 +117,14 @@ const AlianzasRoutes = () => {
       </div>
 
       <div className={styles.container_button}>
-        <button>¿Querés saber cómo podemos ayudarte?</button>
+        <Link
+          passHref
+          href={'https://calendly.com/fecotechsolutions/30min'}
+          target='_blank'
+          title='¿Querés saber cómo podemos ayudarte?'
+        >
+          ¿Querés saber cómo podemos ayudarte?
+        </Link>
       </div>
     </div>
   )

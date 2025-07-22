@@ -102,8 +102,8 @@ const Footer = () => {
                   <Link href={'/#solutions'} title='Soluciones'>
                     <li>Soluciones</li>
                   </Link>
-                  <Link href={'/#tech-stack'} title='Stack'>
-                    <li>Stack Tecnológico</li>
+                  <Link href={'/#tech-stack'} title='Industrias'>
+                    <li>Industrias</li>
                   </Link>
                   <Link href={'/#contact-us'} title='Nosotros'>
                     <li>Nosotros</li>

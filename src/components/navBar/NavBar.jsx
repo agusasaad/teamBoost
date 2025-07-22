@@ -66,9 +66,9 @@ const NavBar = () => {
               passHref
               href={'/#tech-stack'}
               onClick={() => setShowMenu(false)}
-              title='Stack Tecnológico'
+              title='Industrias'
             >
-              <li ref={companyRef}>Stack Tecnológico</li>
+              <li ref={companyRef}>Industrias</li>
             </Link>
             <Link
               passHref
