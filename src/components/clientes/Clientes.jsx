@@ -20,7 +20,7 @@ const Clientes = () => {
       name: 'Transformación tecnológica con Ecolink',
       cargo: 'FOUNDER',
       name_cliente: 'Federico Gauna',
-      sector: 'Salud digital',
+      sector: ' Sostenibilidad, supply chain',
       review:
         'Valoro mucho cada conversación con el equipo, ya que juntos logramos encontrar la mejor solución tecnológica para nuestra logística, que es compleja. Son nuestros consultores de tecnología de confianza.',
       imagen: image_cliente_2,
