@@ -9,6 +9,7 @@ const Clientes = () => {
       id: 1,
       name: 'Optimización de procesos con B.Health',
       cargo: 'FOUNDER',
+      name_cliente: 'Santiago Luque',
       sector: 'Salud digital',
       review:
         'Trabajar en conjunto nos permitió desarrollar una solución más sólida, escalable y alineada a nuestras necesidades. Confiamos plenamente en que siempre aportarán valor para seguir mejorando nuestro producto.',
@@ -18,6 +19,7 @@ const Clientes = () => {
       id: 2,
       name: 'Transformación tecnológica con Ecolink',
       cargo: 'FOUNDER',
+      name_cliente: 'Federico Gauna',
       sector: 'Salud digital',
       review:
         'Valoro mucho cada conversación con el equipo, ya que juntos logramos encontrar la mejor solución tecnológica para nuestra logística, que es compleja. Son nuestros consultores de tecnología de confianza.',
@@ -40,6 +42,7 @@ const Clientes = () => {
               />
               <div className={styles.text}>
                 <h3>{cliente.name}</h3>
+                <span>{cliente.name_cliente}</span>
                 <strong>
                   {cliente.cargo} · <span>{cliente.sector}</span>
                 </strong>
