@@ -1,6 +1,6 @@
-'use client'
-import styles from './SectionCards.module.css'
-import Arrow from '@/assets/icons/Arrow'
+"use client";
+import styles from "./SectionCards.module.css";
+import Arrow from "@/assets/icons/Arrow";
 
 const SectionCards = ({ mainTitle, solutionsData = [] }) => {
   return (
@@ -10,11 +10,7 @@ const SectionCards = ({ mainTitle, solutionsData = [] }) => {
       </div>
       <div className={styles.solutions}>
         {solutionsData.map((item, index) => (
-          <div
-            key={index}
-            className={styles.card}
-            // ref={(el) => (cards.current[index] = el)}
-          >
+          <div key={index} className={styles.card}>
             <span>{item.icon}</span>
 
             <div>
@@ -25,7 +21,7 @@ const SectionCards = ({ mainTitle, solutionsData = [] }) => {
         ))}
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default SectionCards
+export default SectionCards;
