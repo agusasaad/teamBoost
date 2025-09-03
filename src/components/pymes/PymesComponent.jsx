@@ -1,17 +1,15 @@
 "use client";
-import React, { useState, useEffect } from "react";
+import Modal from "../modal/Modal";
 import styles from "./pymes.module.css";
 import UsersIcon from "@/assets/icons/UsersIcon";
-import Link from "next/link";
-import Modal from "../modal/Modal";
+import React, { useState, useEffect } from "react";
 import FiTrendingUp from "@/assets/icons/FiTrendingUp";
 import { FaBullseye, FaClock } from "react-icons/fa";
 import { FiMessageSquare, FiMap, FiZap, FiCheckCircle } from "react-icons/fi";
+import { useForm, ValidationError } from "@formspree/react";
 
 const PymesComponent = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
-  const [loading, setLoading] = useState(false);
-  const [sent, setSent] = useState(false);
 
   const openModal = () => setIsModalOpen(true);
   const closeModal = () => setIsModalOpen(false);
@@ -24,24 +22,7 @@ const PymesComponent = () => {
     return () => clearTimeout(timer);
   }, []);
 
-  const handleSubmit = async (e) => {
-    e.preventDefault();
-    setLoading(true);
-
-    const formData = new FormData(e.currentTarget);
-
-    await fetch(
-      "https://docs.google.com/forms/d/e/1FAIpQLScFbO3puoPLgKdHSimtLP3VbSOciPVNy7XI5CVy5dQWXB_OdQ/formResponse",
-      {
-        method: "POST",
-        body: formData,
-        mode: "no-cors",
-      }
-    );
-
-    setLoading(false);
-    setSent(true);
-  };
+  const [state, handleSubmit] = useForm("mgvlnzbk");
 
   return (
     <>
@@ -109,6 +90,7 @@ const PymesComponent = () => {
               </span>
 
               <h3>100%</h3>
+
               <p>
                 trazabilidad
                 <br />
@@ -169,36 +151,40 @@ const PymesComponent = () => {
         <div className={styles.modalContent}>
           {/* Title & Description */}
           <div className={styles.textContainer}>
-            <h2>🚀 Llevate guias de IA para tu PyME</h2>
+            <h2>🚀 Llevate guías de IA para tu PyME</h2>
             <p>
               Déjanos tu correo y recibí nuestro newsletter con tips prácticos
               de tecnología e Inteligencia Artificial aplicados a negocios.
             </p>
           </div>
 
-          {/* Input Form */}
-          <form onSubmit={handleSubmit} className={styles.modalForm}>
-            <input
-              type="email"
-              name="entry.111111111"
-              placeholder="Tu correo electrónico"
-              className={styles.inputForm}
-              required
-            />
+          {state.succeeded ? (
+            <p className={styles.successText}>✅ ¡Enviado con éxito!</p>
+          ) : (
+            <form onSubmit={handleSubmit} className={styles.modalForm}>
+              <input
+                id="email"
+                type="email"
+                name="email"
+                placeholder="Tu correo electrónico"
+                className={styles.inputForm}
+                required
+              />
+              <ValidationError
+                prefix="Email"
+                field="email"
+                errors={state.errors}
+              />
 
-            {/* Suscribe Button */}
-            <button
-              type="submit"
-              disabled={loading}
-              className={styles.submitButton}
-            >
-              {loading ? "Enviando..." : "Suscribirme"}
-            </button>
-
-            {sent && (
-              <p className={styles.successText}>✅ ¡Enviado con éxito!</p>
-            )}
-          </form>
+              <button
+                type="submit"
+                disabled={state.submitting}
+                className={styles.submitButton}
+              >
+                {state.submitting ? "Enviando..." : "Suscribirme"}
+              </button>
+            </form>
+          )}
         </div>
       </Modal>
     </>
