@@ -6,10 +6,11 @@ import React, { useState, useEffect } from "react";
 import FiTrendingUp from "@/assets/icons/FiTrendingUp";
 import { FaBullseye, FaClock } from "react-icons/fa";
 import { FiMessageSquare, FiMap, FiZap, FiCheckCircle } from "react-icons/fi";
-import { useForm, ValidationError } from "@formspree/react";
 
 const PymesComponent = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
+  const [loading, setLoading] = useState(false);
+  const [sent, setSent] = useState(false);
 
   const openModal = () => setIsModalOpen(true);
   const closeModal = () => setIsModalOpen(false);
@@ -18,11 +19,36 @@ const PymesComponent = () => {
     const timer = setTimeout(() => {
       openModal();
     }, 3000);
-
     return () => clearTimeout(timer);
   }, []);
 
-  const [state, handleSubmit] = useForm("mgvlnzbk");
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    setLoading(true);
+
+    const form = e.currentTarget;
+    const formData = new FormData(form);
+
+    try {
+      const res = await fetch("https://formspree.io/f/mgvlnzbk", {
+        method: "POST",
+        body: formData,
+        headers: { Accept: "application/json" },
+      });
+
+      if (res.ok) {
+        setSent(true);
+        form.reset();
+      } else {
+        alert("❌ Hubo un error. Intentá de nuevo.");
+      }
+    } catch (error) {
+      console.error("Error al enviar:", error);
+      alert("❌ Error de conexión con el servidor.");
+    } finally {
+      setLoading(false);
+    }
+  };
 
   return (
     <>
@@ -36,7 +62,6 @@ const PymesComponent = () => {
             Ayudamos a las pymes a crecer con tecnología aplicada + IA a sus
             procesos reales
           </h1>
-
           <p>
             Te mostramos cómo aplicar la Inteligencia Artificial en ventas,
             operaciones y decisiones estratégicas. Desde chatbots para no perder
@@ -64,7 +89,6 @@ const PymesComponent = () => {
               <span>
                 <FaClock fontSize={22} />
               </span>
-
               <h3>30–50%</h3>
               <p>
                 menos tiempo
@@ -76,7 +100,6 @@ const PymesComponent = () => {
               <span>
                 <FiTrendingUp width="22px" height="22px" color="white" />
               </span>
-
               <h3>+15–25%</h3>
               <p>
                 oportunidades
@@ -88,9 +111,7 @@ const PymesComponent = () => {
               <span>
                 <FaBullseye fontSize={22} color="white" />
               </span>
-
               <h3>100%</h3>
-
               <p>
                 trazabilidad
                 <br />
@@ -106,7 +127,6 @@ const PymesComponent = () => {
 
         <div className={styles.stepsContainer}>
           <h1>¿Cómo funciona?</h1>
-
           <div className={styles.stepsCards}>
             <div className={styles.stepCard}>
               <span>1</span>
@@ -114,7 +134,6 @@ const PymesComponent = () => {
               <h3>Charla Inicial</h3>
               <p>Consultoría gratuita inicial te escuchamos.</p>
             </div>
-
             <div className={styles.stepCard}>
               <FiMap className={styles.icon} />
               <h3>
@@ -122,7 +141,6 @@ const PymesComponent = () => {
               </h3>
               <p>Detectamos cuellos de botella, oportunidades y quick-wins.</p>
             </div>
-
             <div className={styles.stepCard}>
               <FiZap className={styles.icon} />
               <h3>
@@ -149,7 +167,6 @@ const PymesComponent = () => {
       {/* Modal */}
       <Modal isModalOpen={isModalOpen} onClose={closeModal}>
         <div className={styles.modalContent}>
-          {/* Title & Description */}
           <div className={styles.textContainer}>
             <h2>🚀 Llevate guías de IA para tu PyME</h2>
             <p>
@@ -158,30 +175,24 @@ const PymesComponent = () => {
             </p>
           </div>
 
-          {state.succeeded ? (
+          {/* Form con fetch */}
+          {sent ? (
             <p className={styles.successText}>✅ ¡Enviado con éxito!</p>
           ) : (
             <form onSubmit={handleSubmit} className={styles.modalForm}>
               <input
-                id="email"
                 type="email"
                 name="email"
                 placeholder="Tu correo electrónico"
                 className={styles.inputForm}
                 required
               />
-              <ValidationError
-                prefix="Email"
-                field="email"
-                errors={state.errors}
-              />
-
               <button
                 type="submit"
-                disabled={state.submitting}
+                disabled={loading}
                 className={styles.submitButton}
               >
-                {state.submitting ? "Enviando..." : "Suscribirme"}
+                {loading ? "Enviando..." : "Suscribirme"}
               </button>
             </form>
           )}
